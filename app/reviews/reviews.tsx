@@ -107,7 +107,7 @@ export default function Reviews() {
   return (
     <section className="pb-20 md:pb-[10.625rem]">
       <div className="container">
-        <h2 className="mb-16 text-2xl uppercase md:mb-[6.0625rem]">
+        <h2 className="mb-16 text-2xl uppercase font-semibold md:mb-[6.0625rem]">
           отзывы наших пациентов
         </h2>
       </div>

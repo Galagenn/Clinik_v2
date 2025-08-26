@@ -50,7 +50,7 @@ export default function AboutUs() {
   }
 
   return (
-    <section className="py-16">
+    <section className="py-10 sm:py-16">
       <div className="container mx-auto px-4">
         {/* Навигационная цепочка */}
         <div className="mb-8">
@@ -63,12 +63,12 @@ export default function AboutUs() {
 
 
         {/* Основной контент */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center mb-10 sm:mb-16">
           <div className="lg:col-span-8">
-            <h1 className={`${styles.title} mb-8`}>
+            <h1 className={`${styles.title} mb-8 font-bold`}>
               О нашей клинике
             </h1>
-            <p className={styles.text}>
+            <p className={`${styles.text} text-sm sm:text-base`}>
               Наша клиника — это современный медицинский центр, предоставляющий широкий спектр услуг для вашего здоровья и благополучия. Мы объединяем опытных специалистов, передовые технологии и индивидуальный подход к каждому пациенту. Основные принципы нашей работы — профессионализм, забота о пациентах и постоянное стремление к совершенству в медицинских услугах.
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function AboutUs() {
         </div>
 
         {/* Галерея изображений */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-8">
           <div className="relative mx-auto" style={{ maxWidth: '402px', maxHeight: '313px', height: '313px', width: '100%' }}>
             <Image
               src="/about-us/clinic-corridor.jpg"
@@ -129,7 +129,7 @@ export default function AboutUs() {
 
         {/* Статистика */}
         <div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative" 
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center relative" 
           style={{ 
             padding: '12.5% 0',
            }}
@@ -144,22 +144,25 @@ export default function AboutUs() {
 
           {/* Контент */}
           <div className="relative z-10">
-            <h2 className="text-5xl font-light text-gray-800 mb-2">10+</h2>
-            <p className="text-gray-600">лет работы клиники</p>
+            <h2 className="text-3xl sm:text-5xl font-light text-gray-800 mb-1 sm:mb-2">10+</h2>
+            <p className="text-xs sm:text-base text-gray-600">лет работы клиники</p>
           </div>
           <div className="relative z-10">
-            <h2 className="text-5xl font-light text-gray-800 mb-2">30+</h2>
-            <p className="text-gray-600">квалифицированных специалистов</p>
+            <h2 className="text-3xl sm:text-5xl font-light text-gray-800 mb-1 sm:mb-2">30+</h2>
+            <p className="text-xs sm:text-base text-gray-600">квалифицированных специалистов</p>
           </div>
           <div className="relative z-10">
-            <h2 className="text-5xl font-light text-gray-800 mb-2">5000+</h2>
-            <p className="text-gray-600">довольных пациентов</p>
+            <h2 className="text-3xl sm:text-5xl font-light text-gray-800 mb-1 sm:mb-2">5000+</h2>
+            <p className="text-xs sm:text-base text-gray-600">довольных пациентов</p>
           </div>
         </div>
 
         {/* Преимущества */}
         <div className="mt-20">
-          <h2 className="text-3xl font-light text-center mb-12">Наши преимущества</h2>
+          <div className="mb-6 sm:mb-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-semibold uppercase tracking-wide">Наши преимущества</h2>
+            <div className="mx-auto mt-2 h-1 w-16 rounded bg-[#648eff] sm:h-[5px]"></div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -181,32 +184,35 @@ export default function AboutUs() {
             ].map((item, index) => (
               <div 
                 key={index}
-                className="bg-white p-8 mx-auto w-full"
+                className="bg-white p-6 sm:p-8 mx-auto w-full"
                 style={{ 
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-around',
                   boxShadow: '0px 4px 4.8px 0px rgba(0, 0, 0, 0.25)',
                   maxWidth: '300px',
-                  height: '293px',
-                  borderRadius: '40px'
+                  borderRadius: '40px',
+                  height: '300px'
                 }}
               >
                 <h3 
-                  className="text-center mb-4"
+                  className="text-center mb-2 sm:mb-3"
                   style={{ 
                     fontFamily: 'Montserrat',
-                    fontSize: '16px',
-                    fontWeight: 300,
-                    lineHeight: '19.5px'
+                    fontSize: '18px',
+                    fontWeight: 500,
+                    lineHeight: '22px'
                   }}
                 >
                   {item.title}
                 </h3>
                 <p 
-                  className="text-center"
+                  className="text-center text-gray-600"
                   style={{ 
                     fontFamily: 'Montserrat',
-                    fontSize: '18px',
+                    fontSize: '14px',
                     fontWeight: 300,
-                    lineHeight: '19.5px',
+                    lineHeight: '20px',
                     textUnderlinePosition: 'from-font',
                     textDecorationSkipInk: 'none'
                   }}

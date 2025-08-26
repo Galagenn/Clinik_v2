@@ -2,12 +2,12 @@ export default function Addresses() {
   return (
     <section className="pb-10 sm:pb-20 md:pb-40">
       <div className="container">
-        <h2 className="mb-8 sm:mb-[4.6875rem] text-2xl">Наши адреса</h2>
+        <h2 className="mb-8 sm:mb-[4.6875rem] text-2xl font-semibold">Наши адреса</h2>
       </div>
-      <div className="container grid !max-w-[69.5rem] grid-cols-[500px,150px] md:grid-cols-[4fr,1fr] overflow-x-scroll justify-between">
-        <p className="mb-[3.75rem]">Адреса:</p>
-        <p className="mb-[3.75rem] justify-self-end">Номера телефона</p>
-        <ul className="space-y-4">
+      <div className="container grid !max-w-[69.5rem] grid-cols-1 gap-x-6 md:grid-cols-[4fr,1fr] justify-between">
+        <p className="mb-6 sm:mb-[3.75rem]">Адреса:</p>
+        <p className="mb-6 sm:mb-[3.75rem] md:justify-self-end">Номера телефона</p>
+        <ul className="space-y-4 break-words">
           <li>
             <p>Абылай хан көшесі, 45, Астана, Қазақстан, 050000</p>
           </li>
@@ -39,7 +39,7 @@ export default function Addresses() {
             <p>Алтын Орда көшесі, 22, Атырау, Қазақстан, 060000</p>
           </li>
         </ul>
-        <ul className="space-y-4 justify-self-end">
+        <ul className="space-y-4 md:justify-self-end">
           <li>
             <a href="tel:+77051112233">+7 (705) 111-22-33</a>
           </li>

@@ -127,7 +127,7 @@ export default function AllServices() {
   return (
     <section className="pb-16 sm:pb-32">
       <div className="container !max-w-[80.5rem]">
-        <h2 className="mb-[3.125rem] text-[1.6875rem]">Наши услуги</h2>
+        <h2 className="mb-[3.125rem] text-[1.6875rem] font-semibold">Наши услуги</h2>
         <ServicesItems servicesItems={servicesItems} />
       </div>
     </section>

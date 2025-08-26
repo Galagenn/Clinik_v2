@@ -6,5 +6,5 @@ interface HeadingProps {
 }
 
 export default function Heading({ children, className }: HeadingProps) {
-  return <h2 className={cn("text-2xl sm:text-4xl", className)}>{children}</h2>;
+  return <h2 className={cn("text-xl sm:text-3xl font-semibold", className)}>{children}</h2>;
 }

@@ -71,7 +71,7 @@ const SalesCard = ({ title, description }: { title: string; description: string 
     }}
     className="bg-white p-6"
   >
-    <h3 className="sales-card-title mb-4">{title}</h3>
+    <h3 className="sales-card-title mb-4 font-semibold">{title}</h3>
     <p className="sales-card-text">{description}</p>
   </div>
 );
@@ -108,8 +108,8 @@ export default function Sales() {
               <h1 
                 style={{ 
                   fontFamily: 'Montserrat',
-                  fontSize: '32px',
-                  fontWeight: 200,
+                  fontSize: '24px',
+                  fontWeight: 400,
                   lineHeight: '39.01px',
                   textAlign: 'left',
                   background: 'transparent'
@@ -121,7 +121,7 @@ export default function Sales() {
               <p 
                 style={{ 
                   fontFamily: 'Montserrat',
-                  fontSize: '24px',
+                  fontSize: '16px',
                   fontWeight: 200,
                   lineHeight: '29.26px',
                   textAlign: 'left'
@@ -188,8 +188,8 @@ export default function Sales() {
           <h2 
             style={{ 
               fontFamily: 'Montserrat',
-              fontSize: '24px',
-              fontWeight: 300,
+              fontSize: '18px',
+              fontWeight: 500,
               lineHeight: '29.26px'
             }}
             className="mb-8"
@@ -214,8 +214,8 @@ export default function Sales() {
               className="mb-12"
               style={{ 
                 fontFamily: 'Montserrat',
-                fontSize: '24px',
-                fontWeight: 300,
+                fontSize: '16px',
+                fontWeight: 400,
                 lineHeight: '29.26px',
                 textAlign: 'center'
               }}

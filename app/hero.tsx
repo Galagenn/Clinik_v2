@@ -150,7 +150,8 @@ export default function Hero() {
                 width={600}
                 height={578}
                 alt="hero"
-                className="object-cover"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 600px"
+                className="h-auto w-full object-cover"
               />
             </AspectRatio>
           </div>

@@ -36,7 +36,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="container flex flex-col justify-between gap-4 min-[582px]:flex-row min-[582px]:items-center">
-        <h2 className="min-[650px]::text-2xl text-xl uppercase">
+        <h2 className="min-[650px]:text-2xl text-xl uppercase font-semibold">
           отзывы наших пациентов
         </h2>
         <Link
@@ -73,7 +73,7 @@ export default function Testimonials() {
         }}
         centeredSlides
         loop
-        className="!pb-56 !pt-20"
+        className="!pb-24 !pt-10 sm:!pb-40 sm:!pt-16 lg:!pb-56 lg:!pt-20"
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>

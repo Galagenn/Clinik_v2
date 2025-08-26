@@ -15,11 +15,11 @@ export default function Header() {
   const { isMenuOpen, setIsMenuOpen } = useIsMenuOpen();
 
   return (
-    <header className="relative z-30">
+    <header className="sticky top-0 z-30">
       <div className="bg-neutral-100">
         <div
           className={cn(
-            "container relative z-10 flex min-h-20 items-center justify-between gap-4 lg:min-h-[7.375rem]",
+            "container relative z-10 flex min-h-20 items-center justify-between gap-4 border-b border-black/5 lg:min-h-[7.375rem]",
             isMenuOpen && "bg-white",
           )}
         >

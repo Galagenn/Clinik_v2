@@ -6,7 +6,7 @@ export default function Promotions() {
       <div className="container">
         <div className="mb-[2.9375rem] flex flex-col items-start justify-between gap-4 min-[475px]:flex-row min-[475px]:items-center">
           <div>
-            <h2 className="text-2xl">Актуальные акции</h2>
+            <h2 className="text-2xl font-semibold">Актуальные акции</h2>
             <p>Всего: 10</p>
           </div>
           <Link

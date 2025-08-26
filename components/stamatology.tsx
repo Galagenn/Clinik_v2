@@ -146,12 +146,12 @@ const Stomatology: React.FC = () => {
         <>
             <section className="bg-[#F5F5F5] rounded-[15px] max-w-[1340px] mx-auto px-4 sm:px-6">
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
-                    <div className="w-full lg:w-[44%] p-4 lg:p-[45px_0_45px_45px]">
-                        <h1 className="font-montserrat text-[20px] leading-[24.38px] font-light mb-[60px]">
+                    <div className="w-full lg:w-[44%] p-3 lg:p-[45px_0_45px_45px]">
+                        <h1 className="font-montserrat text-[18px] sm:text-[20px] leading-[22px] sm:leading-[24.38px] font-light mb-6 sm:mb-[60px]">
                             Стоматология: забота о здоровье зубов и десен
                         </h1>
 
-                        <p className="font-montserrat text-[20px] leading-[24.38px] font-extralight text-gray-600 mb-6 ">
+                        <p className="font-montserrat text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24.38px] font-extralight text-gray-600 mb-4 sm:mb-6 ">
                             Стоматология — это отрасль медицины, посвященная диагностике, лечению и профилактике заболеваний зубов, десен и полости рта.
                         </p>
 
@@ -241,7 +241,7 @@ const Stomatology: React.FC = () => {
 
 
             <section className="mt-16 px-4 sm:px-6">
-                <h2 className="text-[20px] leading-[24.38px] mb-8 font-montserrat font-extralight">
+                <h2 className="text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8 font-montserrat font-extralight">
                     Наши специалисты по стоматологии
                 </h2>
 
@@ -256,23 +256,23 @@ const Stomatology: React.FC = () => {
                                 className="rounded-full mb-4 object-cover w-[100px] h-[100px]"
                             />
 
-                            <h3 className="font-montserrat font-extralight text-[22px] leading-[26.82px] text-center mb-2">
+                            <h3 className="font-montserrat font-extralight text-[18px] sm:text-[22px] leading-[22px] sm:leading-[26.82px] text-center mb-1 sm:mb-2">
                                 {doctor.name}
                             </h3>
 
-                            <p className="font-montserrat font-extralight text-[16px] leading-[19.5px] text-gray-600 text-center mb-2 doctor-position">
+                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-1 sm:mb-2 doctor-position">
                                 {doctor.position}
                             </p>
 
-                            <p className="font-montserrat font-extralight text-[16px] leading-[19.5px] text-gray-600 text-center mb-2 doctor-specialization mt-[20px]">
+                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-specialization mt-3 sm:mt-[20px]">
                                 {doctor.specialization}
                             </p>
 
-                            <p className="font-montserrat font-extralight text-[16px] leading-[19.5px] text-gray-600 text-center mb-2 doctor-experience">
+                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-experience">
                                 {doctor.experience}
                             </p>
 
-                            <p className="font-montserrat font-extralight text-[16px] leading-[19.5px] text-gray-600 text-center mb-4">
+                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-3 sm:mb-4">
                                 {doctor.schedule}
                             </p>
 
@@ -346,18 +346,18 @@ const Stomatology: React.FC = () => {
             </section>
 
             <section className="mt-16 px-4 sm:px-6">
-                <h2 className="font-montserrat font-extralight text-[20px] leading-[24.38px] mb-8">
+                <h2 className="font-montserrat font-extralight text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
                     Основные направления стоматологии:
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
                     {directions.map((direction, index) => (
                         <div key={index} className="bg-[#F4F4F4] p-6 rounded-[15px] w-full max-w-[238px] h-auto lg:h-[294px] shadow-[0px_4px_4px_0px_#00000040]">
-                            <h3 className="font-montserrat font-extralight text-[16px] leading-[19.5px] mb-3">
+                            <h3 className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] mb-2 sm:mb-3">
                                 {direction.title}
                             </h3>
 
-                            <p className="font-montserrat font-extralight text-[16px] leading-[19.5px] text-gray-600">
+                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600">
                                 {direction.description}
                             </p>
                         </div>
@@ -366,7 +366,7 @@ const Stomatology: React.FC = () => {
             </section>
 
             <section className="mt-16 mb-[120px] px-4 sm:px-6">
-                <h2 className="font-montserrat font-extralight text-[20px] leading-[24.38px] mb-8">
+                <h2 className="font-montserrat font-extralight text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
                     Советы по уходу за зубами:
                 </h2>
 
@@ -388,7 +388,7 @@ const Stomatology: React.FC = () => {
                                     className="bg-gray-50 p-4 rounded-[10px] flex items-start w-full max-w-[759px] min-h-[62px]"
                                 >
                                     <span className="text-blue-400 mr-3 flex-shrink-0">•</span>
-                                    <p className="text-gray-600 font-montserrat font-extralight">{advice.tip}</p>
+                                    <p className="text-gray-600 font-montserrat font-extralight text-[14px] sm:text-[16px]">{advice.tip}</p>
                                 </div>
                             ))}
                         </div>

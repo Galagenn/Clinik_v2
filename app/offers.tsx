@@ -16,7 +16,7 @@ export default function Offers() {
         >
           <SwiperSlide className="mb-10 md:mb-20 lg:mb-32">
             <div>
-              <h2 className="mb-12 text-2xl sm:text-3xl md:mb-[4.625rem] md:text-5xl">
+              <h2 className="mb-12 text-2xl font-bold sm:text-3xl md:mb-[4.625rem] md:text-5xl">
                 Акции и специальные предложения
               </h2>
               <div className="text-base sm:text-lg md:text-2xl">
