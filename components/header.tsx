@@ -9,7 +9,6 @@ import { Button } from "./ui/button";
 import Navbar from "./navbar";
 import Logo from "./logo";
 import { useIsMenuOpen } from "./hooks/use-menu-open";
-import { z } from "zod";
 
 export default function Header() {
   const isMobile = useIsMobile(915);
