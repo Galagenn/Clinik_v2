@@ -107,8 +107,8 @@ export default function Reviews() {
   return (
     <section className="pb-20 md:pb-[10.625rem]">
       <div className="container">
-        <h2 className="mb-16 text-2xl uppercase font-semibold md:mb-[6.0625rem]">
-          отзывы наших пациентов
+        <h2 className="mb-16 text-2xl font-semibold tracking-tight md:mb-[6.0625rem]">
+          Отзывы наших пациентов
         </h2>
       </div>
       <div className="container !max-w-[83.875rem]">
@@ -126,7 +126,7 @@ export default function Reviews() {
           <div className="text-center">
             <Button
               onClick={showMore}
-              className="h-auto w-full rounded-[.9375rem] bg-[#82a4ff] px-[2.125rem] py-3 text-center text-xl font-medium text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25),inset_0_-3px_6px_3px_rgba(0,0,0,0.07)] transition-shadow hover:bg-[#82a4ff] hover:shadow-none min-[475px]:w-auto"
+              className="h-auto w-full rounded-xl bg-primary px-6 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-primary/90 min-[475px]:w-auto"
             >
               Открыть еще
             </Button>
@@ -135,7 +135,7 @@ export default function Reviews() {
           <div className="text-center">
             <Button
               onClick={showLess}
-              className="h-auto w-full rounded-[.9375rem] bg-[#82a4ff] px-[2.125rem] py-3 text-center text-xl font-medium text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25),inset_0_-3px_6px_3px_rgba(0,0,0,0.07)] transition-shadow hover:bg-[#82a4ff] hover:shadow-none min-[475px]:w-auto"
+              className="h-auto w-full rounded-xl bg-primary px-6 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-primary/90 min-[475px]:w-auto"
             >
               Скрыть
             </Button>

@@ -1,14 +1,14 @@
 .title {
-  font-family: Montserrat;
-  font-size: 32px;
-  font-weight: 200;
+  font-family: inherit;
+  font-size: 45px;
+  font-weight: 600;
   line-height: 39.01px;
   text-align: left;
   background: transparent;
 }
 
 .text {
-  font-family: Montserrat;
+  font-family: inherit;
   font-size: 24px;
   font-weight: 200;
   line-height: 29.26px;
@@ -16,7 +16,7 @@
 }
 
 .backgroundText {
-  font-family: Montserrat;
+  font-family: inherit;
   font-size: 24px;
   font-weight: 300;
   line-height: 29.26px;

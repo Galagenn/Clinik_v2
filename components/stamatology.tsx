@@ -147,11 +147,11 @@ const Stomatology: React.FC = () => {
             <section className="bg-[#F5F5F5] rounded-[15px] max-w-[1340px] mx-auto px-4 sm:px-6">
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
                     <div className="w-full lg:w-[44%] p-3 lg:p-[45px_0_45px_45px]">
-                        <h1 className="font-montserrat text-[18px] sm:text-[20px] leading-[22px] sm:leading-[24.38px] font-light mb-6 sm:mb-[60px]">
+                        <h1 className="font-sans text-[18px] sm:text-[20px] leading-[22px] sm:leading-[24.38px] font-normal mb-6 sm:mb-[60px]">
                             Стоматология: забота о здоровье зубов и десен
                         </h1>
 
-                        <p className="font-montserrat text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24.38px] font-extralight text-gray-600 mb-4 sm:mb-6 ">
+                        <p className="font-sans text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24.38px] font-light text-gray-600 mb-4 sm:mb-6 ">
                             Стоматология — это отрасль медицины, посвященная диагностике, лечению и профилактике заболеваний зубов, десен и полости рта.
                         </p>
 
@@ -164,7 +164,7 @@ const Stomatology: React.FC = () => {
                 </DialogTrigger>
                 <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-light">
+                    <DialogTitle className="text-xl font-normal">
                       Записаться к нам:
                     </DialogTitle>
                   </DialogHeader>
@@ -179,7 +179,7 @@ const Stomatology: React.FC = () => {
                               <Input
                                 placeholder="Имя"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -196,7 +196,7 @@ const Stomatology: React.FC = () => {
                                 type="tel"
                                 placeholder="Телефон номера"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -230,10 +230,12 @@ const Stomatology: React.FC = () => {
                     </div>
 
                     <div className="relative w-full lg:w-[56%] h-[280px]">
-                        <img
+                        <Image
                             src="/stamatology/slide-Photoroom.png"
                             alt="Стоматологические инструменты"
-                            className="object-contain w-full h-full"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 56vw"
+                            className="object-contain"
                         />
                     </div>
                 </div>
@@ -241,7 +243,7 @@ const Stomatology: React.FC = () => {
 
 
             <section className="mt-16 px-4 sm:px-6">
-                <h2 className="text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8 font-montserrat font-extralight">
+                <h2 className="text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8 font-sans font-normal">
                     Наши специалисты по стоматологии
                 </h2>
 
@@ -256,23 +258,23 @@ const Stomatology: React.FC = () => {
                                 className="rounded-full mb-4 object-cover w-[100px] h-[100px]"
                             />
 
-                            <h3 className="font-montserrat font-extralight text-[18px] sm:text-[22px] leading-[22px] sm:leading-[26.82px] text-center mb-1 sm:mb-2">
+                            <h3 className="font-sans font-normal text-[18px] sm:text-[22px] leading-[22px] sm:leading-[26.82px] text-center mb-1 sm:mb-2">
                                 {doctor.name}
                             </h3>
 
-                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-1 sm:mb-2 doctor-position">
+                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-1 sm:mb-2 doctor-position">
                                 {doctor.position}
                             </p>
 
-                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-specialization mt-3 sm:mt-[20px]">
+                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-specialization mt-3 sm:mt-[20px]">
                                 {doctor.specialization}
                             </p>
 
-                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-experience">
+                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-experience">
                                 {doctor.experience}
                             </p>
 
-                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-3 sm:mb-4">
+                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-3 sm:mb-4">
                                 {doctor.schedule}
                             </p>
 
@@ -284,7 +286,7 @@ const Stomatology: React.FC = () => {
                                 </DialogTrigger>
                                 <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
                                     <DialogHeader>
-                                        <DialogTitle className="text-xl font-light">
+                                        <DialogTitle className="text-xl font-normal">
                                             Записаться к нам:
                                         </DialogTitle>
                                     </DialogHeader>
@@ -299,7 +301,7 @@ const Stomatology: React.FC = () => {
                                                             <Input
                                                                 placeholder="Имя"
                                                                 {...field}
-                                                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
                                                             />
                                                         </FormControl>
                                                         <FormMessage />
@@ -316,7 +318,7 @@ const Stomatology: React.FC = () => {
                                                                 type="tel"
                                                                 placeholder="Телефон номера"
                                                                 {...field}
-                                                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
                                                             />
                                                         </FormControl>
                                                         <FormMessage />
@@ -346,18 +348,18 @@ const Stomatology: React.FC = () => {
             </section>
 
             <section className="mt-16 px-4 sm:px-6">
-                <h2 className="font-montserrat font-extralight text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
+                <h2 className="font-sans font-normal text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
                     Основные направления стоматологии:
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
                     {directions.map((direction, index) => (
                         <div key={index} className="bg-[#F4F4F4] p-6 rounded-[15px] w-full max-w-[238px] h-auto lg:h-[294px] shadow-[0px_4px_4px_0px_#00000040]">
-                            <h3 className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] mb-2 sm:mb-3">
+                            <h3 className="font-sans font-normal text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] mb-2 sm:mb-3">
                                 {direction.title}
                             </h3>
 
-                            <p className="font-montserrat font-extralight text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600">
+                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600">
                                 {direction.description}
                             </p>
                         </div>
@@ -366,7 +368,7 @@ const Stomatology: React.FC = () => {
             </section>
 
             <section className="mt-16 mb-[120px] px-4 sm:px-6">
-                <h2 className="font-montserrat font-extralight text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
+                <h2 className="font-sans font-normal text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
                     Советы по уходу за зубами:
                 </h2>
 
@@ -388,7 +390,7 @@ const Stomatology: React.FC = () => {
                                     className="bg-gray-50 p-4 rounded-[10px] flex items-start w-full max-w-[759px] min-h-[62px]"
                                 >
                                     <span className="text-blue-400 mr-3 flex-shrink-0">•</span>
-                                    <p className="text-gray-600 font-montserrat font-extralight text-[14px] sm:text-[16px]">{advice.tip}</p>
+                                    <p className="text-gray-600 font-sans font-light text-[14px] sm:text-[16px]">{advice.tip}</p>
                                 </div>
                             ))}
                         </div>

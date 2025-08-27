@@ -9,6 +9,28 @@ export default {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+				sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+			},
+			boxShadow: {
+				premium: "0 10px 30px -12px rgba(42,157,244,0.35), 0 8px 12px -8px rgba(0,0,0,0.08)",
+				soft: "0 6px 18px -8px rgba(0,0,0,0.12)",
+				inset: "inset 0 1px 2px rgba(0,0,0,0.06)",
+			},
+			keyframes: {
+				floatUp: {
+					'0%': { transform: 'translateY(8px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+			},
+			animation: {
+				floatUp: 'floatUp 600ms ease-out both',
+				fadeIn: 'fadeIn 600ms ease-out both',
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -81,11 +81,11 @@ export default function Contacts() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="h-[21.875rem] w-full xl:max-w-[43.75rem]"
+            className="h-[21.875rem] w-full rounded-2xl border border-border shadow-sm xl:max-w-[43.75rem]"
           ></iframe>
         </div>
         <div>
-          <h3 className="mb-7 text-2xl font-normal sm:mb-[3.5625rem] sm:text-4xl">
+          <h3 className="mb-7 text-2xl font-semibold tracking-tight sm:mb-[3.5625rem] sm:text-4xl">
             Отправить нам сообщение
           </h3>
           <form action="#">
@@ -93,22 +93,21 @@ export default function Contacts() {
               <Input
                 required
                 placeholder="Введите свое имя"
-                className="h-auto rounded-[1.25rem] border-[#d9d9d9] p-3 text-[.8125rem] font-normal placeholder:text-[#747474] sm:p-5"
+                className="h-auto rounded-xl border-input p-3 text-[.8125rem] font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary sm:p-5"
               />
               <Input
                 required
                 placeholder="Введите свою фамилию"
-                className="h-auto rounded-[1.25rem] border-[#d9d9d9] p-3 text-[.8125rem] font-normal placeholder:text-[#747474] sm:p-5"
+                className="h-auto rounded-xl border-input p-3 text-[.8125rem] font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary sm:p-5"
               />
               <Textarea
                 placeholder="Напишите свое сообщение здесь"
-                className="rounded-[1.25rem] border-[#d9d9d9] px-3 py-2 text-[.8125rem] font-normal placeholder:text-[#747474] sm:px-5 sm:py-[.9375rem]"
+                className="rounded-xl border-input px-3 py-2 text-[.8125rem] font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary sm:px-5 sm:py-[.9375rem]"
               />
             </div>
             <Button
               type="submit"
-              variant="outline"
-              className="w-full rounded-[2.5rem] border-[#d9d9d9] px-[2.75rem] py-3 font-normal shadow-[0_3px_2px_-1px_rgba(0,0,0,0.25)] transition-shadow hover:bg-transparent hover:shadow-none min-[480px]:w-auto"
+              className="w-full rounded-xl bg-primary px-[2.75rem] py-3 font-semibold text-white shadow-sm transition-colors hover:bg-primary/90 min-[480px]:w-auto"
             >
               Отправить
             </Button>

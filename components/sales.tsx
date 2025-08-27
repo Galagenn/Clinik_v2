@@ -61,18 +61,15 @@ const salesData = [
 
 const SalesCard = ({ title, description }: { title: string; description: string }) => (
   <div 
-    style={{
-      backdropFilter: 'blur(44.5px)',
-      boxShadow: '0px 0px 19.8px 6px #E0E0E06B inset',
-      maxWidth: '424px',
-      height: '162px',
-      width: '100%',
-      borderRadius: '15px'
-    }}
-    className="bg-white p-6"
+    className="w-full max-w-[26.5rem] rounded-2xl border border-border bg-gradient-to-br from-white to-[#f2fbff] p-6 shadow-soft ring-1 ring-transparent transition-all hover:-translate-y-1 hover:shadow-premium hover:ring-primary/10"
   >
-    <h3 className="sales-card-title mb-4 font-semibold">{title}</h3>
-    <p className="sales-card-text">{description}</p>
+    <h3 className="mb-2 text-lg font-semibold text-foreground">{title}</h3>
+    <p className="text-foreground/70">{description}</p>
+    <div className="mt-5">
+      <Link href="/sales" className="inline-block rounded-xl bg-secondary px-4 py-2 text-sm font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:bg-secondary/90">
+        Подробнее
+      </Link>
+    </div>
   </div>
 );
 
@@ -91,63 +88,47 @@ export default function Sales() {
 
   return (
     <div className="w-full">
-      <section className="py-16">
+      {/* Hero */}
+      <section className="pb-12 pt-8 sm:pb-20 sm:pt-14">
         <div className="container mx-auto px-4">
           {/* Навигационная цепочка */}
-          <div className="mb-8">
-            <p className="text-gray-600">
-              <Link href="/" className="hover:underline">Главная страница</Link>
-              <span className="mx-2">/</span>
-              <span>Акции</span>
-            </p>
+          <div className="mb-6 text-sm text-foreground/60">
+            <Link href="/" className="hover:underline">Главная страница</Link>
+            <span className="mx-2">/</span>
+            <span>Акции</span>
           </div>
-          
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h1 
-                style={{ 
-                  fontFamily: 'Montserrat',
-                  fontSize: '24px',
-                  fontWeight: 400,
-                  lineHeight: '39.01px',
-                  textAlign: 'left',
-                  background: 'transparent'
-                }}
-                className="mb-8"
-              >
-                Акции в нашей клинике
-              </h1>
-              <p 
-                style={{ 
-                  fontFamily: 'Montserrat',
-                  fontSize: '16px',
-                  fontWeight: 200,
-                  lineHeight: '29.26px',
-                  textAlign: 'left'
-                }}
-              >
-                Мы заботимся о вашем здоровье и стремимся сделать наши услуги еще доступнее! Поэтому в клинике регулярно действуют акции, которые помогут вам сэкономить на диагностике, лечении и профилактике заболеваний. Вот некоторые из наших актуальных предложений.
-              </p>
-            </div>
-
-            <div className="relative h-[400px]">
-              <Image
-                src="/sales/image.png"
-                alt="Акции и скидки"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={100}
-                priority
-                className="object-contain"
-              />
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-white via-[#f6fbff] to-[#e8f7ff] p-6 shadow-premium min-[992px]:p-10">
+            <div className="pointer-events-none absolute inset-0 -z-10 opacity-70 [background-image:radial-gradient(900px_450px_at_80%_20%,rgba(42,157,244,0.18),transparent),radial-gradient(700px_350px_at_20%_80%,rgba(0,191,166,0.16),transparent)]" />
+            <div className="grid items-center gap-8 min-[900px]:grid-cols-2">
+              <div>
+                <h1 className="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Акции в нашей клинике</h1>
+                <p className="text-foreground/80 sm:text-lg">
+                  Мы заботимся о вашем здоровье и делаем услуги еще доступнее. Следите за актуальными предложениями и получайте выгоду на диагностику, лечение и профилактику.
+                </p>
+                <div className="mt-6 flex gap-3">
+                  <Link href="#promos" className="rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-premium transition-transform hover:-translate-y-0.5 hover:bg-primary/90">Смотреть акции</Link>
+                  <Link href="/contacts" className="rounded-xl bg-white px-6 py-3 font-semibold text-primary ring-1 ring-primary/20 transition-all hover:ring-primary/30">Связаться</Link>
+                </div>
+              </div>
+              <div className="relative mx-auto h-[260px] w-full max-w-[28rem] sm:h-[320px]">
+                <Image
+                  src="/sales/image.png"
+                  alt="Акции и скидки"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={100}
+                  priority
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Интегрированный компонент Offers */}
-      <section className="bg-neutral-100 pb-[1.125rem] pt-[3.75rem]">
+      {/* Слайдер с предложениями */}
+      <section className="bg-muted/40 pb-6 pt-10 sm:pb-12 sm:pt-16">
         <div className="container">
           <Swiper
             modules={[Pagination]}
@@ -155,22 +136,19 @@ export default function Sales() {
             slidesPerView={1}
             pagination={{ clickable: true }}
           >
-            <SwiperSlide className="mb-10 md:mb-20 lg:mb-32">
-              <div>
-                <h2 className="mb-12 text-2xl sm:text-3xl md:mb-[4.625rem] md:text-5xl">
+            <SwiperSlide className="mb-10 md:mb-16 lg:mb-20">
+              <div className="rounded-2xl bg-white p-6 shadow-soft ring-1 ring-border">
+                <h2 className="mb-6 text-2xl font-extrabold tracking-tight sm:text-3xl md:mb-10 md:text-5xl">
                   Акции и специальные предложения
                 </h2>
-                <div className="text-base sm:text-lg md:text-2xl">
-                  <p>Первичная консультация со скидкой</p>
-                  <ul>
-                    <li className="relative pl-9 before:absolute before:left-[1.125rem] before:content-['•']">
-                      Описание: Получите скидку 20% на первую консультацию у
-                      любого специалиста клиники!
+                <div className="text-base text-foreground/80 sm:text-lg md:text-2xl">
+                  <p className="font-medium text-foreground">Первичная консультация со скидкой</p>
+                  <ul className="mt-3 space-y-2">
+                    <li className="relative pl-6 before:absolute before:left-0 before:top-2 before:size-2 before:rounded-full before:bg-primary/40">
+                      Описание: Получите скидку 20% на первую консультацию у любого специалиста клиники!
                     </li>
-                    <li className="relative pl-9 before:absolute before:left-[1.125rem] before:content-['•']">
-                      Детали: Акция доступна новым пациентам. Узнайте о своем
-                      здоровье и получите профессиональные рекомендации по
-                      специальной цене.
+                    <li className="relative pl-6 before:absolute before:left-0 before:top-2 before:size-2 before:rounded-full before:bg-primary/40">
+                      Детали: Акция доступна новым пациентам. Узнайте о своем здоровье и получите профессиональные рекомендации по специальной цене.
                     </li>
                   </ul>
                 </div>
@@ -183,58 +161,37 @@ export default function Sales() {
       </section>
 
       {/* Блок с карточками акций */}
-      <section className="py-16">
+      <section id="promos" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 
-            style={{ 
-              fontFamily: 'Montserrat',
-              fontSize: '18px',
-              fontWeight: 500,
-              lineHeight: '29.26px'
-            }}
-            className="mb-8"
-          >
-            Всего акции
-          </h2>
-          <p className="mb-12">4</p>
+          <div className="mb-8 flex items-end justify-between">
+            <div>
+              <h2 className="text-2xl font-extrabold tracking-tight">Все акции</h2>
+              <p className="text-foreground/60">Всего: {salesData.length}</p>
+            </div>
+            <Link href="/" className="hidden rounded-xl bg-primary px-5 py-2 font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:bg-primary/90 sm:inline-block">На главную</Link>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+          <div className="grid place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {salesData.map((sale, index) => (
-              <div key={index} className="w-full flex justify-center">
-                <SalesCard 
-                  title={sale.title}
-                  description={sale.description}
-                />
-              </div>
+              <SalesCard key={index} title={sale.title} description={sale.description} />
             ))}
           </div>
 
-          <div className="text-center mt-16 max-w-4xl mx-auto">
-            <p 
-              className="mb-12"
-              style={{ 
-                fontFamily: 'Montserrat',
-                fontSize: '16px',
-                fontWeight: 400,
-                lineHeight: '29.26px',
-                textAlign: 'center'
-              }}
-            >
-              Наши акции — это возможность позаботиться о здоровье всей семьи с комфортом и выгодой. 
-              Следите за обновлениями на сайте клиники или звоните нам, чтобы узнать больше о текущих 
-              предложениях и акциях.
+          <div className="mx-auto mt-16 max-w-4xl text-center">
+            <p className="mb-8 text-foreground/80">
+              Наши акции — это возможность позаботиться о здоровье всей семьи с комфортом и выгодой. Следите за обновлениями или свяжитесь с нами, чтобы узнать больше о текущих предложениях.
             </p>
 
-            <div className="flex flex-col items-center gap-x-10 gap-y-4 min-[580px]:flex-row justify-between max-w-[663px] w-full mx-auto">
+            <div className="mx-auto flex w-full max-w-[663px] flex-col items-center justify-between gap-4 min-[580px]:flex-row">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="h-auto w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-base font-medium shadow-[0_0_20px_0_rgba(144,173,252,0.63)] hover:bg-[#648eff] min-[580px]:w-[15.25rem]">
+                  <Button className="h-auto w-full rounded-xl bg-primary/80 px-6 py-4 text-base font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:bg-primary min-[580px]:w-[15.25rem]">
                     Записаться на прием
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
+                <DialogContent className="border-border bg-white sm:rounded-xl">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-light">
+                    <DialogTitle className="text-xl font-semibold">
                       Записаться к нам:
                     </DialogTitle>
                   </DialogHeader>
@@ -249,7 +206,7 @@ export default function Sales() {
                               <Input
                                 placeholder="Имя"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
                               />
                             </FormControl>
                             <FormMessage />
@@ -260,13 +217,13 @@ export default function Sales() {
                         control={form.control}
                         name="phoneNumber"
                         render={({ field }) => (
-                          <FormItem className="mb-[2.625rem]">
+                          <FormItem className="mb-6">
                             <FormControl>
                               <Input
                                 type="tel"
                                 placeholder="Телефон номера"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
                               />
                             </FormControl>
                             <FormMessage />
@@ -275,24 +232,22 @@ export default function Sales() {
                       />
                       <Button
                         type="submit"
-                        className="w-full rounded-[1.25rem] bg-[#fffcfc] text-lg font-bold uppercase text-black hover:bg-neutral-200"
+                        className="w-full rounded-xl bg-secondary text-lg font-semibold text-white shadow-premium transition-transform hover:-translate-y-0.5 hover:bg-secondary/90"
                       >
                         отправить
                       </Button>
                     </form>
                   </Form>
                   <DialogFooter>
-                    <p className="text-center text-[.625rem] font-light">
-                      Используя наш сайт, вы подтверждаете согласие с этой
-                      политикой обработки персональных данных и разрешаете нам
-                      обрабатывать ваши данные в соответствии с её положениями.
+                    <p className="text-center text-[.75rem] text-foreground/60">
+                      Используя наш сайт, вы подтверждаете согласие с политикой обработки персональных данных.
                     </p>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
               <Link
-                href="/"
-                className="inline-block w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-center font-medium text-white shadow-[0_0_20px_0_rgba(144,173,252,0.63)] transition-colors hover:bg-[#648eff] min-[580px]:w-[15.25rem]"
+                href="/contacts"
+                className="inline-block w-full rounded-xl bg-white px-6 py-4 text-center font-semibold text-primary ring-1 ring-primary/20 transition-all hover:ring-primary/30 min-[580px]:w-[15.25rem]"
               >
                 Консультация
               </Link>

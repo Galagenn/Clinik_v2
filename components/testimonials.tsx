@@ -34,14 +34,14 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="testimonials">
+    <section className="testimonials pb-12 pt-6 sm:pb-20 sm:pt-12">
       <div className="container flex flex-col justify-between gap-4 min-[582px]:flex-row min-[582px]:items-center">
-        <h2 className="min-[650px]:text-2xl text-xl uppercase font-semibold">
+        <h2 className="min-[650px]:text-2xl text-xl font-semibold tracking-tight">
           отзывы наших пациентов
         </h2>
         <Link
           href="/reviews"
-          className="w-full rounded-[.9375rem] bg-[#82a4ff] px-[2.8125rem] py-3 text-center text-xl font-medium text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25),inset_0_-3px_6px_3px_rgba(0,0,0,0.07)] transition-shadow hover:shadow-none min-[475px]:w-auto"
+          className="w-full rounded-xl bg-primary px-[2.8125rem] py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary/90 min-[475px]:w-auto"
         >
           Все отзывы
         </Link>
@@ -73,7 +73,7 @@ export default function Testimonials() {
         }}
         centeredSlides
         loop
-        className="!pb-24 !pt-10 sm:!pb-40 sm:!pt-16 lg:!pb-56 lg:!pt-20"
+        className="!pb-16 !pt-8 sm:!pb-28 sm:!pt-12 lg:!pb-40 lg:!pt-16"
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>

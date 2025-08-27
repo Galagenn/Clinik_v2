@@ -16,12 +16,12 @@ export default function BreadcrumbSection({
   breadcrumbPage,
 }: BreadBrumbSectionProps) {
   return (
-    <div className="pb-5 pt-[3.625rem] sm:pb-10">
+    <div className="pt-24 pb-6 sm:pt-28 sm:pb-10">
       <div className="container">
         <Breadcrumb>
-          <BreadcrumbList className="font-light">
+          <BreadcrumbList className="text-base text-foreground/80">
             <BreadcrumbItem>
-              <BreadcrumbLink href="/" className="underline">
+              <BreadcrumbLink href="/" className="text-primary hover:underline">
                 Главная страница
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -29,10 +29,11 @@ export default function BreadcrumbSection({
               <Slash />
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbPage>{breadcrumbPage}</BreadcrumbPage>
+              <BreadcrumbPage className="text-foreground">{breadcrumbPage}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+        <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">{breadcrumbPage}</h1>
       </div>
     </div>
   );

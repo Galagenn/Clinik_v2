@@ -65,7 +65,7 @@ export default function AboutUs() {
         {/* Основной контент */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center mb-10 sm:mb-16">
           <div className="lg:col-span-8">
-            <h1 className={`${styles.title} mb-8 font-bold`}>
+            <h1 className={`${styles.title} mb-16 font-bold`}>
               О нашей клинике
             </h1>
             <p className={`${styles.text} text-sm sm:text-base`}>
@@ -144,15 +144,15 @@ export default function AboutUs() {
 
           {/* Контент */}
           <div className="relative z-10">
-            <h2 className="text-3xl sm:text-5xl font-light text-gray-800 mb-1 sm:mb-2">10+</h2>
+            <h2 className="text-3xl sm:text-5xl font-normal text-gray-800 mb-1 sm:mb-2">10+</h2>
             <p className="text-xs sm:text-base text-gray-600">лет работы клиники</p>
           </div>
           <div className="relative z-10">
-            <h2 className="text-3xl sm:text-5xl font-light text-gray-800 mb-1 sm:mb-2">30+</h2>
+            <h2 className="text-3xl sm:text-5xl font-normal text-gray-800 mb-1 sm:mb-2">30+</h2>
             <p className="text-xs sm:text-base text-gray-600">квалифицированных специалистов</p>
           </div>
           <div className="relative z-10">
-            <h2 className="text-3xl sm:text-5xl font-light text-gray-800 mb-1 sm:mb-2">5000+</h2>
+            <h2 className="text-3xl sm:text-5xl font-normal text-gray-800 mb-1 sm:mb-2">5000+</h2>
             <p className="text-xs sm:text-base text-gray-600">довольных пациентов</p>
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function AboutUs() {
                 <h3 
                   className="text-center mb-2 sm:mb-3"
                   style={{ 
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'Inter',
                     fontSize: '18px',
                     fontWeight: 500,
                     lineHeight: '22px'
@@ -209,7 +209,7 @@ export default function AboutUs() {
                 <p 
                   className="text-center text-gray-600"
                   style={{ 
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'Inter',
                     fontSize: '14px',
                     fontWeight: 300,
                     lineHeight: '20px',
@@ -250,7 +250,7 @@ export default function AboutUs() {
                 </DialogTrigger>
                 <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-light">
+                    <DialogTitle className="text-xl font-normal">
                       Записаться к нам:
                     </DialogTitle>
                   </DialogHeader>
@@ -265,7 +265,7 @@ export default function AboutUs() {
                               <Input
                                 placeholder="Имя"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
                               />
                             </FormControl>
                             <FormMessage />
@@ -282,7 +282,7 @@ export default function AboutUs() {
                                 type="tel"
                                 placeholder="Телефон номера"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
                               />
                             </FormControl>
                             <FormMessage />

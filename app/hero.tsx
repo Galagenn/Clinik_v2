@@ -47,15 +47,16 @@ export default function Hero() {
   }
 
   return (
-    <section className="pb-[2.3125rem] pt-[1.875rem] sm:pb-[4.625rem] sm:pt-[3.75rem]">
+    <section className="pb-8 pt-6 sm:pb-20 sm:pt-12">
       <div className="container">
-        <div className="flex flex-col-reverse items-center justify-between gap-4 rounded-[3.125rem] bg-neutral-100 pb-6 pl-[.625rem] pr-[.625rem] pt-5 min-[992px]:flex-row min-[992px]:pb-2 min-[992px]:pl-[3.3125rem]">
+        <div className="relative flex flex-col-reverse items-center justify-between gap-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-white via-[#f6fbff] to-[#e8f7ff] pb-6 pl-2 pr-2 pt-5 shadow-premium min-[992px]:flex-row min-[992px]:pb-4 min-[992px]:pl-12">
+          <div className="pointer-events-none absolute inset-0 -z-10 opacity-70 [background-image:radial-gradient(900px_450px_at_80%_20%,rgba(42,157,244,0.20),transparent),radial-gradient(700px_350px_at_20%_80%,rgba(0,191,166,0.18),transparent)]" />
           <div className="min-[992px]:basis-[38.4375rem]">
             <div className="mb-[1.875rem]">
-              <h1 className="mb-5 text-3xl font-light uppercase sm:mb-[1.875rem] sm:text-5xl md:text-[4rem]">
-                clinic name
+              <h1 className="mb-5 text-4xl font-extrabold tracking-tight sm:mb-8 sm:text-6xl md:text-[4.25rem]">
+                Современная клиника для всей семьи
               </h1>
-              <div className="space-y-10 text-sm sm:text-base min-[992px]:space-y-20">
+              <div className="space-y-6 text-sm leading-7 text-foreground/80 sm:text-base min-[992px]:space-y-10">
                 <p>
                   Добро пожаловать в нашу клинику! Мы — современное медицинское
                   учреждение, предлагающее комплексные услуги для взрослых и
@@ -70,16 +71,16 @@ export default function Hero() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-x-10 gap-y-4 min-[580px]:flex-row">
+            <div className="flex flex-col items-center gap-x-4 gap-y-4 min-[580px]:flex-row">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="h-auto w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-base font-medium shadow-[0_0_20px_0_rgba(144,173,252,0.63)] hover:bg-[#648eff] min-[580px]:w-[15.25rem]">
+                  <Button className="h-auto w-full rounded-xl bg-primary py-4 text-base font-semibold text-white shadow-premium transition-transform hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-primary/90 min-[580px]:w-[15.25rem]">
                     Записаться на прием
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
+                <DialogContent className="border-border bg-white sm:rounded-xl">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-light">
+                    <DialogTitle className="text-xl font-semibold">
                       Записаться к нам:
                     </DialogTitle>
                   </DialogHeader>
@@ -94,7 +95,7 @@ export default function Hero() {
                               <Input
                                 placeholder="Имя"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
                               />
                             </FormControl>
                             <FormMessage />
@@ -111,7 +112,7 @@ export default function Hero() {
                                 type="tel"
                                 placeholder="Телефон номера"
                                 {...field}
-                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
                               />
                             </FormControl>
                             <FormMessage />
@@ -120,14 +121,14 @@ export default function Hero() {
                       />
                       <Button
                         type="submit"
-                        className="w-full rounded-[1.25rem] bg-[#fffcfc] text-lg font-bold uppercase text-black hover:bg-neutral-200"
+                        className="w-full rounded-xl bg-secondary text-lg font-semibold text-white shadow-premium hover:-translate-y-0.5 hover:bg-secondary/90"
                       >
                         отправить
                       </Button>
                     </form>
                   </Form>
                   <DialogFooter>
-                    <p className="text-center text-[.625rem] font-light">
+                    <p className="text-center text-[.75rem] text-foreground/60">
                       Используя наш сайт, вы подтверждаете согласие с этой
                       политикой обработки персональных данных и разрешаете нам
                       обрабатывать ваши данные в соответствии с её положениями.
@@ -137,7 +138,7 @@ export default function Hero() {
               </Dialog>
               <Link
                 href="/"
-                className="inline-block w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-center font-medium text-white shadow-[0_0_20px_0_rgba(144,173,252,0.63)] transition-colors hover:bg-[#648eff] min-[580px]:w-[15.25rem]"
+                className="inline-block w-full rounded-xl bg-white/80 py-4 text-center font-semibold text-primary ring-1 ring-primary/20 transition-all hover:bg-white hover:ring-primary/30 min-[580px]:w-[15.25rem]"
               >
                 Консультация
               </Link>
@@ -151,7 +152,7 @@ export default function Hero() {
                 height={578}
                 alt="hero"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 600px"
-                className="h-auto w-full object-cover"
+                className="h-auto w-full rounded-[1.5rem] object-cover shadow-sm"
               />
             </AspectRatio>
           </div>
