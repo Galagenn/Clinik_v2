@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllServiceSlugs, getServiceBySlug, services } from "../data";
+import { getAllServiceSlugs, getServiceBySlug } from "../data";
 
 type Props = {
   params: { slug: string };
@@ -27,9 +27,7 @@ export default function ServicePage({ params }: Props) {
   const service = getServiceBySlug(params.slug);
   if (!service) notFound();
 
-  const related = (service.related ?? [])
-    .map((slug) => getServiceBySlug(slug))
-    .filter(Boolean);
+  // Related services can be computed here when needed
 
   return (
     <div className="wrapper">

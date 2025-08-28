@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllDoctorIds, getDoctorById } from "../data";
+import type { Doctor } from "../data";
 
 type Props = {
   params: { id: string };
@@ -171,15 +172,20 @@ export default function DoctorPage({ params }: Props) {
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {/** Simple pick: next two IDs cyclically */}
-                  {[1,2,3].map((i) => i.toString()).filter((i) => i !== doctor.id).slice(0, 3).map((id) => getDoctorById(id)).filter(Boolean).map((d) => (
-                    <Link key={(d as any)!.id} href={`/doctors/${(d as any)!.id}`} className="overflow-hidden rounded-2xl border border-border transition-all hover:-translate-y-0.5">
+                  {([1, 2, 3]
+                    .map((i) => i.toString())
+                    .filter((i) => i !== doctor.id)
+                    .slice(0, 3)
+                    .map((id) => getDoctorById(id))
+                    .filter((d): d is Doctor => Boolean(d)) as Doctor[]).map((d) => (
+                    <Link key={d.id} href={`/doctors/${d.id}`} className="overflow-hidden rounded-2xl border border-border transition-all hover:-translate-y-0.5">
                       <div className="relative">
-                        <Image src={(d as any)!.img} alt={(d as any)!.name} width={800} height={600} className="h-40 w-full object-cover" />
-                        <div className="absolute right-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-semibold text-primary">⭐ {(d as any)!.rating}</div>
+                        <Image src={d.img} alt={d.name} width={800} height={600} className="h-40 w-full object-cover" />
+                        <div className="absolute right-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-semibold text-primary">⭐ {d.rating}</div>
                       </div>
                       <div className="p-4">
-                        <div className="text-sm font-semibold">{(d as any)!.name}</div>
-                        <div className="text-xs text-foreground/60">{(d as any)!.role}</div>
+                        <div className="text-sm font-semibold">{d.name}</div>
+                        <div className="text-xs text-foreground/60">{d.role}</div>
                       </div>
                     </Link>
                   ))}
