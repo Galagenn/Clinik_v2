@@ -18,7 +18,7 @@ export default function AboutUs() {
                     International Clinic of Asia
                   </h1>
                   <p className="mt-6 text-base leading-7 text-foreground/70 sm:text-lg md:max-w-xl">
-                    Товарищество с ограниченной ответственностью "International Clinic of Asia" – многопрофильный медицинский центр в г. Астана. 
+                    Товарищество с ограниченной ответственностью &quot;International Clinic of Asia&quot; – многопрофильный медицинский центр в г. Астана. 
                     Мы — современная клиника полного цикла, где качество медицинской помощи сочетается с внимательным отношением к каждому пациенту. Наша миссия — сделать медицину доступной, понятной и эффективной.
                   </p>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">

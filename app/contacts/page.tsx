@@ -18,7 +18,7 @@ export default function Contacts() {
                     International Clinic of Asia
                   </h1>
                   <p className="mt-6 text-base leading-7 text-foreground/70 sm:text-lg md:max-w-xl">
-                    Товарищество с ограниченной ответственностью "International Clinic of Asia" – многопрофильный медицинский центр в г. Астана. 
+                    Товарищество с ограниченной ответственностью &quot;International Clinic of Asia&quot; – многопрофильный медицинский центр в г. Астана. 
                     Свяжитесь с нами любым удобным способом. Удобное расположение в центре города с отличной транспортной доступностью. Бесплатная парковка и комфортные условия для посещения.
                   </p>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -160,11 +160,11 @@ export default function Contacts() {
                       <div className="space-y-3 text-sm text-foreground/70">
                                                  <div className="flex items-center gap-2">
                            <span className="size-2 rounded-full bg-primary"></span>
-                           <span><strong>Автобусы:</strong> №1, №2, №3, №4 (остановка "Центр")</span>
+                           <span><strong>Автобусы:</strong> №1, №2, №3, №4 (остановка &quot;Центр&quot;)</span>
                          </div>
                          <div className="flex items-center gap-2">
                            <span className="size-2 rounded-full bg-primary"></span>
-                           <span><strong>Маршрутки:</strong> №101, №102, №103 (остановка "Центр")</span>
+                           <span><strong>Маршрутки:</strong> №101, №102, №103 (остановка &quot;Центр&quot;)</span>
                          </div>
                          <div className="flex items-center gap-2">
                            <span className="size-2 rounded-full bg-primary"></span>
@@ -225,7 +225,7 @@ export default function Contacts() {
                        </div>
                        <div className="flex items-start gap-3">
                          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">3</span>
-                         <span>Клиника находится слева, здание с вывеской "International Clinic of Asia"</span>
+                         <span>Клиника находится слева, здание с вывеской &quot;International Clinic of Asia&quot;</span>
                        </div>
                        <div className="flex items-start gap-3">
                          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">4</span>
@@ -237,9 +237,9 @@ export default function Contacts() {
                     <h3 className="mb-4 text-lg font-semibold">Ориентиры</h3>
                     <div className="space-y-2 text-sm text-foreground/70">
                                              <div>• Рядом с центральной площадью (300 м)</div>
-                       <div>• Напротив парка "Центральный"</div>
-                       <div>• Рядом с остановкой "Центр"</div>
-                       <div>• Здание с вывеской "International Clinic of Asia"</div>
+                       <div>• Напротив парка &quot;Центральный&quot;</div>
+                       <div>• Рядом с остановкой &quot;Центр&quot;</div>
+                       <div>• Здание с вывеской &quot;International Clinic of Asia&quot;</div>
                     </div>
                   </div>
                 </div>
