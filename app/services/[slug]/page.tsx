@@ -7,15 +7,16 @@ import type { Metadata } from "next";
 import { getAllServiceSlugs, getServiceBySlug } from "../data";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const service = getServiceBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
   if (!service) return { title: "Услуга не найдена" };
   return {
     title: `${service.title} — услуги клиники`,
@@ -23,8 +24,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ServicePage({ params }: Props) {
-  const service = getServiceBySlug(params.slug);
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
   if (!service) notFound();
 
   // Related services can be computed here when needed

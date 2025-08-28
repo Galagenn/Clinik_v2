@@ -8,15 +8,16 @@ import { getAllDoctorIds, getDoctorById } from "../data";
 import type { Doctor } from "../data";
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export async function generateStaticParams() {
   return getAllDoctorIds().map((id) => ({ id }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const doctor = getDoctorById(params.id);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const doctor = getDoctorById(id);
   if (!doctor) {
     return { title: "Врач не найден" };
   }
@@ -26,8 +27,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function DoctorPage({ params }: Props) {
-  const doctor = getDoctorById(params.id);
+export default async function DoctorPage({ params }: Props) {
+  const { id } = await params;
+  const doctor = getDoctorById(id);
   if (!doctor) {
     notFound();
   }
