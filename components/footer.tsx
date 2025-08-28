@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container grid gap-10 pb-12 pt-12 text-sm text-foreground sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h4 className="mb-4 text-base font-semibold">О клинике</h4>
-          <p className="text-foreground/70">Товарищество с ограниченной ответственностью &quot;International Clinic of Asia&quot; – многопрофильный медицинский центр в г. Астана.</p>
+          <p className="text-foreground/70">Международный медицинский центр &quot;International Clinic of Asia&quot; – многопрофильный медицинский центр, расположенный в г. Астана. Диагностика, консультации, дневной стационар, медосмотры и справки.</p>
         </div>
         <div>
           <h4 className="mb-4 text-base font-semibold">Контакты</h4>
