@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useIsMenuOpen() {
+export function useMenuOpen() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {

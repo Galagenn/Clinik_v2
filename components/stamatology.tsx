@@ -236,7 +236,8 @@ const Stomatology: React.FC = () => {
             {/* Doctors */}
             <section className="mt-12 px-4 sm:px-6">
                 <div className="mx-auto max-w-[1340px]">
-                    <h2 className="mb-6 text-2xl font-extrabold tracking-tight sm:text-3xl">Наши стоматологи</h2>
+                    <h2 className="mb-6 text-2xl font-extrabold tracking-tight sm:text-3xl">International Clinic of Asia</h2>
+                    <p className="mb-4 text-sm text-foreground/60">Наши стоматологи - профессиональное лечение зубов и полости рта</p>
                     <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {doctors.map((doctor, index) => (
                             <div key={index} className="flex h-auto w-full max-w-[300px] flex-col items-center rounded-2xl border border-border bg-white p-6 shadow-soft">

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="shrink-0 basis-12 lg:basis-16">
+    <Link href="/" className="flex items-center gap-3 shrink-0">
       <Image
         src="/logo.png"
         width={64}
@@ -13,6 +13,10 @@ export default function Logo() {
         blurDataURL="/logo.png"
         className="w-12 h-12 lg:w-16 lg:h-16"
       />
+             <div className="block">
+         <div className="text-sm font-semibold text-foreground">International Clinic of Asia</div>
+         <div className="text-xs text-foreground/60">Медицинский центр</div>
+       </div>
     </Link>
   );
 }

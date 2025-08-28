@@ -22,7 +22,7 @@ export default function BreadcrumbSection({
           <BreadcrumbList className="text-base text-foreground/80">
             <BreadcrumbItem>
               <BreadcrumbLink href="/" className="text-primary hover:underline">
-                Главная страница
+                International Clinic of Asia
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>

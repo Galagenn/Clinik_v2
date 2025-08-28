@@ -38,11 +38,6 @@ export const menuList = [
     name: "Контакты",
     href: "/contacts",
   },
-  {
-    id: 7,
-    name: "Адрес",
-    href: "/address",
-  },
 ];
 
 export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
@@ -94,16 +89,50 @@ export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
           </ul>
         </nav>
         {isMenuOpen && (
-          <div className="text-center">
-            <p className="text-sm">
-              Круглосуточная запись и консультация по телефону:
-            </p>
-            <a
-              href="tel:+77070700077"
-              className="text-sm font-semibold text-primary underline lg:text-base"
-            >
-              +7 707 070 00 77
-            </a>
+          <div className="text-center space-y-4">
+            {/* Название клиники в мобильном меню */}
+            <div className="border-t border-border/40 pt-4">
+              <div className="text-lg font-semibold text-foreground">International Clinic of Asia</div>
+              <div className="text-sm text-foreground/60">Медицинский центр</div>
+            </div>
+            
+            {/* Контактная информация */}
+            <div>
+              <p className="text-sm font-medium text-foreground/80">
+                Запись и консультация по телефонам:
+              </p>
+              <div className="mt-2 space-y-1">
+                <a
+                  href="tel:+77172490384"
+                  className="block text-sm font-semibold text-primary underline"
+                >
+                  +7 (7172) 49-03-84
+                </a>
+                <a
+                  href="tel:+77789064060"
+                  className="block text-sm font-semibold text-primary underline"
+                >
+                  +7 (778) 906-40-60
+                </a>
+              </div>
+            </div>
+            
+            {/* Адрес и время работы */}
+            <div className="text-xs text-foreground/60">
+              <p>г. Астана, ул. Мәскеу, 11А</p>
+              <p>Пн-Пт: 08:30–17:30, Сб: 08:30–13:00</p>
+            </div>
+            
+            {/* Кнопка записи */}
+            <div className="pt-2">
+              <Link
+                href="#book"
+                onClick={onClose}
+                className="inline-block w-full rounded-xl bg-primary px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-primary/90"
+              >
+                Записаться на прием
+              </Link>
+            </div>
           </div>
         )}
       </div>

@@ -163,7 +163,8 @@ export default function Sales() {
             <div className="pointer-events-none absolute inset-0 -z-10 opacity-70 [background-image:radial-gradient(900px_450px_at_80%_20%,rgba(42,157,244,0.18),transparent),radial-gradient(700px_350px_at_20%_80%,rgba(0,191,166,0.16),transparent)]" />
             <div className="grid items-center gap-8 min-[900px]:grid-cols-2">
               <div>
-                <h1 className="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Акции в нашей клинике</h1>
+                <h1 className="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">International Clinic of Asia</h1>
+                <p className="mb-4 text-lg text-foreground/70">Акции в нашей клинике</p>
                 <p className="text-foreground/80 sm:text-lg">
                   Мы заботимся о вашем здоровье и делаем услуги еще доступнее. Следите за актуальными предложениями и получайте выгоду на диагностику, лечение и профилактику.
                 </p>
@@ -194,7 +195,8 @@ export default function Sales() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-6 flex items-end justify-between">
               <div>
-                <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">Все акции</h2>
+                <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">International Clinic of Asia</h2>
+            <p className="mb-4 text-sm text-foreground/60">Все акции - выгодные предложения на медицинские услуги</p>
                 <p className="text-foreground/60">Всего: {filteredPromos.length}</p>
               </div>
               <Link href="/" className="hidden rounded-xl bg-primary px-5 py-2 font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:bg-primary/90 sm:inline-block">На главную</Link>
@@ -228,7 +230,7 @@ export default function Sales() {
 
           <div className="mx-auto mt-16 max-w-4xl text-center">
             <p className="mb-8 text-foreground/80">
-              Наши акции — это возможность позаботиться о здоровье всей семьи с комфортом и выгодой. Следите за обновлениями или свяжитесь с нами, чтобы узнать больше о текущих предложениях.
+              International Clinic of Asia — наши акции — это возможность позаботиться о здоровье всей семьи с комфортом и выгодой. Следите за обновлениями или свяжитесь с нами, чтобы узнать больше о текущих предложениях.
             </p>
 
             <div className="mx-auto flex w-full max-w-[663px] flex-col items-center justify-between gap-4 min-[580px]:flex-row">

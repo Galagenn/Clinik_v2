@@ -17,8 +17,11 @@ export default function Enroll() {
                 <Image src={logo} alt="логотип" />
               </Link>
               <h2 className="max-w-[28rem] text-2xl font-semibold tracking-tight min-[480px]:text-3xl sm:text-4xl md:text-5xl">
-                Запишитесь на прием онлайн
+                International Clinic of Asia
               </h2>
+              <p className="mt-2 text-lg text-foreground/70">
+                Запишитесь на прием онлайн
+              </p>
             </div>
             <form
               action="#"

@@ -15,11 +15,12 @@ export default function Home() {
               <div className="grid items-center gap-10 md:grid-cols-2">
                 <div>
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
-                    Качество и забота, которым доверяют
+                    International Clinic of Asia
                   </h1>
                   <p className="mt-6 text-base leading-7 text-foreground/70 sm:text-lg md:max-w-xl">
-                    Современная клиника полного цикла: диагностика, консультации, анализы и
-                    лечение. Честные цены, опытные врачи, продуманный сервис.
+                    Товарищество с ограниченной ответственностью "International Clinic of Asia" – многопрофильный медицинский центр в г. Астана. 
+                    Современная клиника полного цикла: диагностика, консультации, анализы и лечение. 
+                    Честные цены, опытные врачи, продуманный сервис.
                   </p>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link href="#book" className="rounded-xl bg-black px-6 py-3 text-center text-white shadow-sm transition-colors hover:bg-black/90">
@@ -32,7 +33,7 @@ export default function Home() {
                   <div className="mt-8 flex items-center gap-6 text-sm text-foreground/60">
                     <div className="flex items-center gap-2">
                       <span className="size-2 rounded-full bg-green-500" />
-                      Ведем прием каждый день
+                      Ведем прием в будни и субботу
                     </div>
                     <div className="hidden sm:block">Без скрытых платежей</div>
                   </div>
@@ -234,10 +235,10 @@ export default function Home() {
                 {[
                   { q: "Как записаться?", a: "Нажмите «Записаться на прием» и оставьте контакты — мы перезвоним в течение 10 минут." },
                   { q: "Сколько длится прием?", a: "Стандартный прием длится 20–40 минут. Для расширенной консультации — до 60 минут." },
-                  { q: "Работаете ли в выходные?", a: "Да, клиника открыта ежедневно с 08:00 до 20:00, включая выходные." },
+                  { q: "Работаете ли в выходные?", a: "Да, клиника работает по субботам с 08:30 до 13:00, по воскресеньям - выходной." },
                   { q: "Как подготовиться к анализам?", a: "Базовые анализы сдавайте натощак, за 8–12 часов исключите еду и кофе." },
                   { q: "Какие способы оплаты?", a: "Наличными, картой, а также доступна рассрочка у партнеров." },
-                  { q: "Где находитесь?", a: "г. Алматы, ул. Здоровья, 10. Удобная парковка рядом с входом." },
+                  { q: "Где находитесь?", a: "г. Астана, ул. Мәскеу, 11А, 010000. Удобная парковка рядом с входом." },
                 ].map((item, i) => (
                   <details key={i} className="group rounded-2xl border border-border p-5">
                     <summary className="cursor-pointer list-none text-base font-medium">
@@ -258,10 +259,16 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Контакты</h2>
                 <div className="mt-4 space-y-2 text-sm text-foreground/80">
-                  <div><span className="text-foreground/60">Телефон:</span> +7 707 070 00 77</div>
-                  <div><span className="text-foreground/60">Адрес:</span> г. Алматы, ул. Здоровья, 10</div>
-                  <div><span className="text-foreground/60">Время работы:</span> ежедневно 08:00–20:00</div>
-                  <div><span className="text-foreground/60">Почта:</span> clinic@example.com</div>
+                  <div><span className="text-foreground/60">Телефоны:</span></div>
+                  <div>+7 (7172) 49-03-84</div>
+                  <div>+7 (778) 906-40-60</div>
+                  <div>+7 (777) 753-28-28</div>
+                  <div>+7 (702) 377-75-24</div>
+                  <div><span className="text-foreground/60">Адрес:</span> г. Астана, ул. Мәскеу, 11А, 010000</div>
+                  <div><span className="text-foreground/60">Время работы:</span></div>
+                  <div>Пн-Пт: 08:30–17:30</div>
+                  <div>Сб: 08:30–13:00</div>
+                  <div>Вс: выходной</div>
                 </div>
                 <div className="mt-6">
                   <Link href="#book" className="inline-block rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/90">

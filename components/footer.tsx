@@ -6,14 +6,16 @@ export default function Footer() {
       <div className="container grid gap-10 pb-12 pt-12 text-sm text-foreground sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h4 className="mb-4 text-base font-semibold">О клинике</h4>
-          <p className="text-foreground/70">Центр Здоровья — современная клиника для всей семьи.</p>
+          <p className="text-foreground/70">Товарищество с ограниченной ответственностью "International Clinic of Asia" – многопрофильный медицинский центр в г. Астана.</p>
         </div>
         <div>
           <h4 className="mb-4 text-base font-semibold">Контакты</h4>
           <ul className="space-y-1 text-foreground/80">
-            <li>+7 707 070 00 77</li>
-            <li>Пн-Вс: 08:00–20:00</li>
-            <li>г. Алматы, ул. Здоровья, 10</li>
+            <li>+7 (7172) 49-03-84</li>
+            <li>+7 (778) 906-40-60</li>
+            <li>Пн-Пт: 08:30–17:30</li>
+            <li>Сб: 08:30–13:00</li>
+            <li>г. Астана, ул. Мәскеу, 11А</li>
           </ul>
         </div>
         <div>
@@ -50,7 +52,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-border/60 bg-white">
         <div className="container flex flex-col items-center justify-between gap-3 py-6 text-xs text-foreground/60 sm:flex-row sm:text-sm">
-          <p>&copy; {new Date().getFullYear()} Центр Здоровья. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} International Clinic of Asia. Все права защищены.</p>
           <p>Сделано с заботой о пациентах</p>
         </div>
       </div>
