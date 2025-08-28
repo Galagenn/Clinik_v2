@@ -11,11 +11,11 @@ export default function Footer() {
         <div>
           <h4 className="mb-4 text-base font-semibold">Контакты</h4>
           <ul className="space-y-1 text-foreground/80">
-            <li>+7 (7172) 49-03-84</li>
-            <li>+7 (778) 906-40-60</li>
-            <li>Пн-Пт: 08:30–17:30</li>
-            <li>Сб: 08:30–13:00</li>
-            <li>г. Астана, ул. Мәскеу, 11А</li>
+            <li>87026982336</li>
+            <li>Пн–Пт: 08:00–17:00</li>
+            <li>Сб: 08:00–13:00 (рентген/флюорография)</li>
+            <li>Вс: выходной</li>
+            <li>Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</li>
           </ul>
         </div>
         <div>

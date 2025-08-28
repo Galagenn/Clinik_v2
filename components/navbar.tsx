@@ -103,24 +103,18 @@ export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
               </p>
               <div className="mt-2 space-y-1">
                 <a
-                  href="tel:+77172490384"
+                  href="tel:+77026982336"
                   className="block text-sm font-semibold text-primary underline"
                 >
-                  +7 (7172) 49-03-84
-                </a>
-                <a
-                  href="tel:+77789064060"
-                  className="block text-sm font-semibold text-primary underline"
-                >
-                  +7 (778) 906-40-60
+                  87026982336
                 </a>
               </div>
             </div>
             
             {/* Адрес и время работы */}
             <div className="text-xs text-foreground/60">
-              <p>г. Астана, ул. Мәскеу, 11А</p>
-              <p>Пн-Пт: 08:30–17:30, Сб: 08:30–13:00</p>
+              <p>Казахстан, г. Астана, ул. Мәскеу, 11А, 010000</p>
+              <p>Пн–Пт: 08:00–17:00, Сб: 08:00–13:00 (рентген/флюорография)</p>
             </div>
             
             {/* Кнопка записи */}

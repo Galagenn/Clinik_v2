@@ -201,15 +201,12 @@ export default function AboutUs() {
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Свяжитесь с нами</h2>
                                          <div className="mt-4 space-y-2 text-sm text-foreground/80">
-                           <div><span className="text-foreground/60">Телефоны:</span></div>
-                           <div>+7 (7172) 49-03-84</div>
-                           <div>+7 (778) 906-40-60</div>
-                           <div>+7 (777) 753-28-28</div>
-                           <div>+7 (702) 377-75-24</div>
-                           <div><span className="text-foreground/60">Адрес:</span> г. Астана, ул. Мәскеу, 11А, 010000</div>
-                           <div><span className="text-foreground/60">Время работы:</span></div>
-                           <div>Пн-Пт: 08:30–17:30</div>
-                           <div>Сб: 08:30–13:00</div>
+                           <div><span className="text-foreground/60">Телефон:</span></div>
+                           <div>87026982336</div>
+                           <div><span className="text-foreground/60">Адрес:</span> Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
+                           <div><span className="text-foreground/60">Режим работы:</span></div>
+                           <div>Пн–Пт: 08:00–17:00</div>
+                           <div>Сб: 08:00–13:00 (рентген/флюорография)</div>
                            <div>Вс: выходной</div>
                          </div>
                 <div className="mt-6">

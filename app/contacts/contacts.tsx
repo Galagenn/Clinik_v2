@@ -10,11 +10,11 @@ export default function Contacts() {
             <div className="space-y-4">
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-base font-semibold">Адрес</div>
-                <div className="mt-1 text-sm text-foreground/70">г. Алматы, ул. Здоровья, 10</div>
+                <div className="mt-1 text-sm text-foreground/70">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
               </div>
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-base font-semibold">Телефон</div>
-                <div className="mt-1 text-sm text-foreground/70">+7 707 070 00 77</div>
+                <div className="mt-1 text-sm text-foreground/70">87026982336</div>
               </div>
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-base font-semibold">Email</div>

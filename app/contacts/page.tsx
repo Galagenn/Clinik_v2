@@ -53,11 +53,8 @@ export default function Contacts() {
                                  <Image src="/contacts/icons/contacts.png" alt="Телефон" width={20} height={20} className="h-5 w-5" />
                                </div>
                                <div>
-                                 <div className="font-semibold">Телефоны</div>
-                                 <div className="text-foreground/70">+7 (7172) 49-03-84</div>
-                                 <div className="text-foreground/70">+7 (778) 906-40-60</div>
-                                 <div className="text-foreground/70">+7 (777) 753-28-28</div>
-                                 <div className="text-foreground/70">+7 (702) 377-75-24</div>
+                                 <div className="font-semibold">Телефон</div>
+                                 <div className="text-foreground/70">87026982336</div>
                                  <div className="text-sm text-foreground/60">В рабочее время</div>
                                </div>
                              </div>
@@ -77,35 +74,26 @@ export default function Contacts() {
                                </div>
                                <div>
                                  <div className="font-semibold">Адрес</div>
-                                 <div className="text-foreground/70">г. Астана, ул. Мәскеу, 11А, 010000</div>
+                                 <div className="text-foreground/70">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
                                  <div className="text-sm text-foreground/60">Центр города</div>
                                </div>
                              </div>
-                    <div className="flex items-start gap-4">
-                      <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                        <Image src="/contacts/icons/whatsapp.png" alt="WhatsApp" width={20} height={20} className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <div className="font-semibold">WhatsApp</div>
-                        <div className="text-foreground/70">+7 707 070 00 77</div>
-                        <div className="text-sm text-foreground/60">Быстрые ответы на вопросы</div>
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Время работы</h2>
+                  <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Режим работы</h2>
                   <div className="mt-6 space-y-4">
                     <div className="rounded-2xl border border-border p-6">
                       <div className="text-lg font-semibold">Основной график</div>
                                                      <div className="mt-2 space-y-2 text-sm text-foreground/70">
                                  <div className="flex justify-between">
                                    <span>Понедельник - Пятница</span>
-                                   <span className="font-medium">08:30 - 17:30</span>
+                                   <span className="font-medium">08:00 - 17:00</span>
                                  </div>
                                  <div className="flex justify-between">
                                    <span>Суббота</span>
-                                   <span className="font-medium">08:30 - 13:00</span>
+                                   <span className="font-medium">08:00 - 13:00 (рентген/флюорография)</span>
                                  </div>
                                  <div className="flex justify-between">
                                    <span>Воскресенье</span>
@@ -113,12 +101,7 @@ export default function Contacts() {
                                  </div>
                                </div>
                     </div>
-                    <div className="rounded-2xl border border-border p-6">
-                      <div className="text-lg font-semibold">Экстренная помощь</div>
-                                             <div className="mt-2 text-sm text-foreground/70">
-                         При острых состояниях звоните по телефону +7 (778) 906-40-60. Врач дежурной службы проконсультирует и при необходимости примет вас вне графика.
-                       </div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -388,7 +371,7 @@ export default function Contacts() {
                   <p className="mt-3 text-white/70">Теперь, когда вы знаете, как нас найти, запишитесь на прием в удобное для вас время.</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <a href="tel:+77172490384" className="rounded-xl bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary/90">
+                  <a href="tel:+77026982336" className="rounded-xl bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary/90">
                     Позвонить
                   </a>
                   <Link href="#book" className="rounded-xl bg-white px-6 py-3 text-center text-sm font-semibold text-black transition-colors hover:bg-white/90">
