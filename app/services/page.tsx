@@ -206,15 +206,15 @@ export default function Services() {
                     <h3 className="mb-4 text-lg font-semibold">Страховые партнеры</h3>
                     <div className="grid gap-3 text-sm">
                       <div className="flex items-center justify-between">
-                        <span>АО "Казахстанская страховая компания"</span>
+                        <span>АО &quot;Казахстанская страховая компания&quot;</span>
                         <span className="text-primary font-medium">✓</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span>ТОО "Страховая компания "Номад"</span>
+                        <span>ТОО &quot;Страховая компания &quot;Номад&quot;</span>
                         <span className="text-primary font-medium">✓</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span>АО "Страховая компания "Халык"</span>
+                        <span>АО &quot;Страховая компания &quot;Халык&quot;</span>
                         <span className="text-primary font-medium">✓</span>
                       </div>
                     </div>

@@ -4,13 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
 import Logo from "./logo";
-import { useMenuOpen } from "./hooks/use-menu-open";
 import { useMobile } from "./hooks/use-mobile";
 import Navbar from "./navbar";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isMobile } = useMobile();
+  useMobile();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
