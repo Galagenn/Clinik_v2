@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { doctors } from "./data";
 
 export default function Doctors() {
   return (
@@ -20,6 +21,11 @@ export default function Doctors() {
                   <p className="mt-6 text-base leading-7 text-foreground/70 sm:text-lg md:max-w-xl">
                     Команда опытных специалистов с многолетним стажем работы. Наши врачи регулярно повышают квалификацию и используют современные методы диагностики и лечения.
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-2 text-xs">
+                    {Array.from(new Set(doctors.flatMap((d) => d.tags ?? []))).slice(0, 10).map((tag) => (
+                      <span key={tag} className="rounded-full border border-border bg-muted px-3 py-1 text-foreground/80">{tag}</span>
+                    ))}
+                  </div>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link href="#book" className="rounded-xl bg-black px-6 py-3 text-center text-white shadow-sm transition-colors hover:bg-black/90">
                       Записаться к врачу
@@ -45,36 +51,45 @@ export default function Doctors() {
             <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
               <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">Основные специалисты</h2>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { name: "Айгуль Садыкова", role: "Главный врач, терапевт", exp: "15 лет опыта", specialization: "Терапия, гастроэнтерология, профилактика", education: "Алматынский медицинский университет", schedule: "Пн-Пт: 09:00-18:00", price: "от 7 000 тг", rating: 4.9, img: "/testimonials/avatar.jpg" },
-                  { name: "Марат Нуртазин", role: "Заведующий стоматологией", exp: "12 лет опыта", specialization: "Терапевтическая стоматология, имплантация", education: "Казахский медицинский университет", schedule: "Вт-Сб: 10:00-19:00", price: "от 8 000 тг", rating: 4.8, img: "/testimonials/avatar.jpg" },
-                  { name: "Елена Ким", role: "Заведующая диагностикой", exp: "10 лет опыта", specialization: "УЗИ, рентгенология, лабораторная диагностика", education: "Медицинский университет Астана", schedule: "Пн, Ср, Пт: 09:00-16:00", price: "от 6 500 тг", rating: 4.7, img: "/testimonials/avatar.jpg" },
-                  { name: "Бахыт Жумагалиев", role: "Кардиолог", exp: "14 лет опыта", specialization: "Кардиология, функциональная диагностика", education: "Алматынский медицинский университет", schedule: "Пн-Пт: 11:00-19:00", price: "от 12 000 тг", rating: 4.9, img: "/testimonials/avatar.jpg" },
-                  { name: "Алёна Шевченко", role: "Дерматолог", exp: "8 лет опыта", specialization: "Дерматология, косметология, аллергология", education: "Казахский медицинский университет", schedule: "Вт-Сб: 09:00-17:00", price: "от 9 000 тг", rating: 4.6, img: "/testimonials/avatar.jpg" },
-                  { name: "Канат Абдрахманов", role: "Невролог", exp: "11 лет опыта", specialization: "Неврология, реабилитация, лечение боли", education: "Медицинский университет Астана", schedule: "Ср-Вс: 10:00-18:00", price: "от 10 000 тг", rating: 4.8, img: "/testimonials/avatar.jpg" },
-                ].map((doctor, idx) => (
-                  <div key={idx} className="overflow-hidden rounded-2xl border border-border bg-white shadow-soft ring-1 ring-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-premium hover:ring-primary/10">
+                {doctors.map((doctor) => (
+                  <div key={doctor.id} className="overflow-hidden rounded-2xl border border-border bg-white shadow-soft ring-1 ring-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-premium hover:ring-primary/10">
                     <div className="relative">
                       <Image src={doctor.img} alt={doctor.name} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
-                      <div className="absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-primary">
-                        ⭐ {doctor.rating}
+                      <div className="absolute top-4 right-4 flex items-center gap-2">
+                        <div className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-primary">⭐ {doctor.rating}</div>
+                        {doctor.nextSlots && doctor.nextSlots[0] && (
+                          <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-foreground/80">Ближайшая: {doctor.nextSlots[0]}</div>
+                        )}
                       </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold">{doctor.name}</h3>
                       <div className="mt-1 text-sm text-foreground/60">{doctor.role}</div>
                       <div className="mt-2 text-sm text-foreground/70">{doctor.specialization}</div>
+                      {doctor.tags && doctor.tags.length > 0 && (
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {doctor.tags.slice(0, 3).map((t) => (
+                            <span key={t} className="rounded-full border border-border bg-muted px-2 py-0.5 text-xs text-foreground/70">{t}</span>
+                          ))}
+                        </div>
+                      )}
                       <div className="mt-3 grid grid-cols-2 gap-2 text-xs text-foreground/70">
                         <div>Опыт: <span className="font-semibold text-foreground">{doctor.exp}</span></div>
                         <div>Прием: <span className="font-semibold text-foreground">{doctor.price}</span></div>
                         <div>Образование: <span className="font-semibold text-foreground">{doctor.education}</span></div>
                         <div>График: <span className="font-semibold text-foreground">{doctor.schedule}</span></div>
                       </div>
+                      {doctor.languages && (
+                        <div className="mt-2 text-xs text-foreground/60">Языки: {doctor.languages?.join(", ")}</div>
+                      )}
+                      {doctor.prices && doctor.prices[0] && (
+                        <div className="mt-2 text-xs text-foreground/60">Прием от <span className="font-semibold text-foreground">{doctor.prices[0].amount}</span></div>
+                      )}
                       <div className="mt-4 flex gap-2">
                         <Link href="#book" className="flex-1 rounded-xl bg-primary px-4 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-primary/90">
                           Записаться
                         </Link>
-                        <Link href={`/doctors/${idx + 1}`} className="rounded-xl bg-muted px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted/80">
+                        <Link href={`/doctors/${doctor.id}`} className="rounded-xl bg-muted px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted/80">
                           Профиль
                         </Link>
                       </div>

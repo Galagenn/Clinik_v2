@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { services as servicesData } from "./data";
 
 export default function Services() {
   return (
@@ -45,24 +46,22 @@ export default function Services() {
             <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
               <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">Основные направления</h2>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {[
-                  { title: "Стоматология", icon: "/services/dentistry.png", description: "Лечение зубов, протезирование, имплантация", price: "от 8 000 тг", href: "/services/stomatology" },
-                  { title: "Диагностика", icon: "/services/diagnostics.png", description: "УЗИ, рентген, МРТ, КТ", price: "от 6 500 тг", href: "/services/diagnostics" },
-                  { title: "Анализы", icon: "/services/analysis.png", description: "Лабораторные исследования крови и мочи", price: "от 3 500 тг", href: "/services/laboratory" },
-                  { title: "Терапия", icon: "/services/therapy.png", description: "Лечение внутренних заболеваний", price: "от 7 000 тг", href: "/services/therapy" },
-                  { title: "Вакцинация", icon: "/services/vaccination.png", description: "Прививки для детей и взрослых", price: "от 2 500 тг", href: "/services/vaccination" },
-                  { title: "Консультации", icon: "/services/consultation.png", description: "Первичные и повторные приемы", price: "от 5 000 тг", href: "/services/consultations" },
-                  { title: "Check-Up", icon: "/services/checkup.png", description: "Комплексное обследование организма", price: "от 25 000 тг", href: "/services/checkup" },
-                  { title: "Справки", icon: "/services/certificates.png", description: "Медицинские документы и справки", price: "от 1 500 тг", href: "/services/certificates" },
-                ].map((service, idx) => (
-                  <div key={idx} className="group rounded-2xl border border-border bg-white p-6 shadow-soft ring-1 ring-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-premium hover:ring-primary/10">
+                {servicesData.map((service) => (
+                  <div key={service.slug} className="group rounded-2xl border border-border bg-white p-6 shadow-soft ring-1 ring-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-premium hover:ring-primary/10">
                     <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-muted">
                       <Image src={service.icon} alt={service.title} width={32} height={32} className="h-8 w-8 object-contain" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
                     <p className="mb-3 text-sm text-foreground/70">{service.description}</p>
-                    <div className="mb-4 text-lg font-bold text-primary">{service.price}</div>
-                    <Link href={service.href} className="inline-block rounded-xl bg-muted px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-primary hover:text-white">
+                    {service.tags && (
+                      <div className="mb-3 flex flex-wrap gap-2">
+                        {service.tags.slice(0, 3).map((t) => (
+                          <span key={t} className="rounded-full border border-border bg-muted px-2 py-0.5 text-xs text-foreground/70">{t}</span>
+                        ))}
+                      </div>
+                    )}
+                    <div className="mb-4 text-lg font-bold text-primary">{service.priceFrom ?? "Цена по запросу"}</div>
+                    <Link href={`/services/${service.slug}`} className="inline-block rounded-xl bg-muted px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-primary hover:text-white">
                       Подробнее
                     </Link>
                   </div>
