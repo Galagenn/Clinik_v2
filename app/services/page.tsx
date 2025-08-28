@@ -2,7 +2,6 @@ import BreadcrumbSection from "@/components/breadcrumb";
 import Enroll from "@/components/enroll";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Testimonials from "@/components/testimonials";
 import AllServices from "./all-services";
 
 export default function Services() {
@@ -12,7 +11,6 @@ export default function Services() {
       <main>
         <BreadcrumbSection breadcrumbPage="Услуги" />
         <AllServices />
-        <Testimonials />
         <Enroll />
       </main>
       <Footer />

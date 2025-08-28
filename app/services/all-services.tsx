@@ -1,126 +1,14 @@
 import ServicesItems from "@/components/services-items";
 
 const servicesItems = [
-  {
-    src: "/services/dentistry.png",
-    title: "Стоматология",
-    href: "/services/stamatology"
-  },
-  {
-    src: "/services/diagnostics.png",
-    title: "Диагностика",
-    href: "#"
-  },
-  {
-    src: "/services/analysis.png",
-    title: "Анализы",
-    href: "#"
-  },
-  {
-    src: "/services/vaccination.png",
-    title: "Вакцинация",
-    href: "#"
-  },
-  {
-    src: "/services/certificates.png",
-    title: "Медицинские справки",
-    href: "#"
-  },
-  {
-    src: "/services/checkup.png",
-    title: "Check-Up",
-    href: "#"
-  },
-  {
-    src: "/services/therapy.png",
-    title: "Терапия",
-    href: "#"
-  },
-  {
-    src: "/services/consultation.png",
-    title: "Консультация",
-    href: "#"
-  },
-  {
-    src: "/services/dentistry.png",
-    title: "Стоматология",
-    href: "/services/stamatology"
-  },
-  {
-    src: "/services/diagnostics.png",
-    title: "Диагностика",
-    href: "#"
-  },
-  {
-    src: "/services/analysis.png",
-    title: "Анализы",
-    href: "#"
-  },
-  {
-    src: "/services/vaccination.png",
-    title: "Вакцинация",
-    href: "#"
-  },
-  {
-    src: "/services/certificates.png",
-    title: "Медицинские справки",
-    href: "#"
-  },
-  {
-    src: "/services/checkup.png",
-    title: "Check-Up",
-    href: "#"
-  },
-  {
-    src: "/services/therapy.png",
-    title: "Терапия",
-    href: "#"
-  },
-  {
-    src: "/services/consultation.png",
-    title: "Консультация",
-    href: "#"
-  },
-  {
-    src: "/services/dentistry.png",
-    title: "Стоматология",
-    href: "/services/stamatology"
-  },
-  {
-    src: "/services/diagnostics.png",
-    title: "Диагностика",
-    href: "#"
-  },
-  {
-    src: "/services/analysis.png",
-    title: "Анализы",
-    href: "#"
-  },
-  {
-    src: "/services/vaccination.png",
-    title: "Вакцинация",
-    href: "#"
-  },
-  {
-    src: "/services/certificates.png",
-    title: "Медицинские справки",
-    href: "#"
-  },
-  {
-    src: "/services/checkup.png",
-    title: "Check-Up",
-    href: "#"
-  },
-  {
-    src: "/services/therapy.png",
-    title: "Терапия",
-    href: "#"
-  },
-  {
-    src: "/services/consultation.png",
-    title: "Консультация",
-    href: "#"
-  },
+  { src: "/services/dentistry.png", title: "Стоматология", href: "/services/stamatology" },
+  { src: "/services/diagnostics.png", title: "Диагностика", href: "#" },
+  { src: "/services/analysis.png", title: "Анализы", href: "#" },
+  { src: "/services/vaccination.png", title: "Вакцинация", href: "#" },
+  { src: "/services/certificates.png", title: "Медицинские справки", href: "#" },
+  { src: "/services/checkup.png", title: "Check-Up", href: "#" },
+  { src: "/services/therapy.png", title: "Терапия", href: "#" },
+  { src: "/services/consultation.png", title: "Консультация", href: "#" },
 ];
 
 export default function AllServices() {

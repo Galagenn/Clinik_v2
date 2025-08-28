@@ -1,8 +1,8 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Sales from "@/components/sales";
-import Testimonials from "@/components/testimonials";
 import Enroll from "@/components/enroll";
+import BreadcrumbSection from "@/components/breadcrumb";
 
 export default function SalesPage() {
   return (
@@ -10,8 +10,8 @@ export default function SalesPage() {
       <Header />
 
       <main>
+        <BreadcrumbSection breadcrumbPage="Акции" />
         <Sales />
-        <Testimonials />
         <Enroll />
       </main>
       <Footer />

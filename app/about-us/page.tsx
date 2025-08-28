@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import BreadcrumbSection from "@/components/breadcrumb";
 import AboutUs from "@/components/about-us";
-import Testimonials from "@/components/testimonials";
 import Enroll from "@/components/enroll";
 
 export default function AboutUsPage() {
@@ -10,8 +10,8 @@ export default function AboutUsPage() {
       <Header />
 
       <main>
+        <BreadcrumbSection breadcrumbPage="О клинике" />
         <AboutUs />
-        <Testimonials />
         <Enroll />
       </main>
       <Footer />

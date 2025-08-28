@@ -144,151 +144,27 @@ const Stomatology: React.FC = () => {
 
     return (
         <>
-            <section className="bg-[#F5F5F5] rounded-[15px] max-w-[1340px] mx-auto px-4 sm:px-6">
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
-                    <div className="w-full lg:w-[44%] p-3 lg:p-[45px_0_45px_45px]">
-                        <h1 className="font-sans text-[18px] sm:text-[20px] leading-[22px] sm:leading-[24.38px] font-normal mb-6 sm:mb-[60px]">
-                            Стоматология: забота о здоровье зубов и десен
+            {/* Hero */}
+            <section className="rounded-3xl bg-gradient-to-br from-white via-[#f6fbff] to-[#eaf6ff] px-4 py-8 shadow-premium sm:px-6">
+                <div className="pointer-events-none relative -z-10 opacity-70 [background-image:radial-gradient(900px_450px_at_80%_20%,rgba(42,157,244,0.14),transparent),radial-gradient(700px_350px_at_20%_80%,rgba(0,191,166,0.12),transparent)]" />
+                <div className="mx-auto grid max-w-[1340px] items-center gap-8 lg:grid-cols-2">
+                    <div className="p-3 lg:p-10">
+                        <h1 className="text-2xl font-extrabold tracking-tight sm:text-4xl">
+                            Стоматология: здоровье зубов и десен без стресса
                         </h1>
-
-                        <p className="font-sans text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24.38px] font-light text-gray-600 mb-4 sm:mb-6 ">
-                            Стоматология — это отрасль медицины, посвященная диагностике, лечению и профилактике заболеваний зубов, десен и полости рта.
+                        <p className="mt-3 text-sm text-foreground/70 sm:text-base">
+                            Диагностика, терапия, ортодонтия и хирургия в одном месте. Современное оборудование, внимательные врачи, прозрачные цены.
                         </p>
-
-                        <div className="flex flex-col items-center gap-x-10 gap-y-4 min-[580px]:flex-row">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="h-auto w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-base font-medium shadow-[0_0_20px_0_rgba(144,173,252,0.63)] hover:bg-[#648eff] min-[580px]:w-[15.25rem]">
-                    Записаться на прием
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
-                  <DialogHeader>
-                    <DialogTitle className="text-xl font-normal">
-                      Записаться к нам:
-                    </DialogTitle>
-                  </DialogHeader>
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)}>
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem className="mb-4">
-                            <FormControl>
-                              <Input
-                                placeholder="Имя"
-                                {...field}
-                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="phoneNumber"
-                        render={({ field }) => (
-                          <FormItem className="mb-[2.625rem]">
-                            <FormControl>
-                              <Input
-                                type="tel"
-                                placeholder="Телефон номера"
-                                {...field}
-                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <Button
-                        type="submit"
-                        className="w-full rounded-[1.25rem] bg-[#fffcfc] text-lg font-bold uppercase text-black hover:bg-neutral-200"
-                      >
-                        отправить
-                      </Button>
-                    </form>
-                  </Form>
-                  <DialogFooter>
-                    <p className="text-center text-[.625rem] font-light">
-                      Используя наш сайт, вы подтверждаете согласие с этой
-                      политикой обработки персональных данных и разрешаете нам
-                      обрабатывать ваши данные в соответствии с её положениями.
-                    </p>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
-              <Link
-                href="/"
-                className="inline-block w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-center font-medium text-white shadow-[0_0_20px_0_rgba(144,173,252,0.63)] transition-colors hover:bg-[#648eff] min-[580px]:w-[15.25rem]"
-              >
-                Консультация
-              </Link>
-            </div>
-                    </div>
-
-                    <div className="relative w-full lg:w-[56%] h-[280px]">
-                        <Image
-                            src="/stamatology/slide-Photoroom.png"
-                            alt="Стоматологические инструменты"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 56vw"
-                            className="object-contain"
-                        />
-                    </div>
-                </div>
-            </section>
-
-
-            <section className="mt-16 px-4 sm:px-6">
-                <h2 className="text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8 font-sans font-normal">
-                    Наши специалисты по стоматологии
-                </h2>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
-                    {doctors.map((doctor, index) => (
-                        <div key={index} className="bg-[#F5F5F5] p-6 rounded-[15px] flex flex-col items-center w-full max-w-[300px] h-auto lg:h-[527px]">
-                            <Image
-                                src={doctor.image}
-                                alt={doctor.name}
-                                width={100}
-                                height={100}
-                                className="rounded-full mb-4 object-cover w-[100px] h-[100px]"
-                            />
-
-                            <h3 className="font-sans font-normal text-[18px] sm:text-[22px] leading-[22px] sm:leading-[26.82px] text-center mb-1 sm:mb-2">
-                                {doctor.name}
-                            </h3>
-
-                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-1 sm:mb-2 doctor-position">
-                                {doctor.position}
-                            </p>
-
-                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-specialization mt-3 sm:mt-[20px]">
-                                {doctor.specialization}
-                            </p>
-
-                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-2 doctor-experience">
-                                {doctor.experience}
-                            </p>
-
-                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600 text-center mb-3 sm:mb-4">
-                                {doctor.schedule}
-                            </p>
-
+                        <div className="mt-6 flex flex-col items-center gap-4 min-[580px]:flex-row">
                             <Dialog>
                                 <DialogTrigger asChild>
-                                    <Button className="max-w-[198px] h-[51px] w-full flex items-center justify-center bg-[#648EFFB2] text-white rounded-[10px] hover:bg-blue-500 transition-colors mt-[37px]">
-                                        Записаться
+                                    <Button className="h-auto w-full rounded-xl bg-primary px-6 py-4 text-base font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:bg-primary/90 min-[580px]:w-[15.25rem]">
+                                        Записаться на прием
                                     </Button>
                                 </DialogTrigger>
-                                <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
+                                <DialogContent className="border-border bg-white sm:rounded-xl">
                                     <DialogHeader>
-                                        <DialogTitle className="text-xl font-normal">
-                                            Записаться к нам:
-                                        </DialogTitle>
+                                        <DialogTitle className="text-xl font-semibold">Записаться к нам:</DialogTitle>
                                     </DialogHeader>
                                     <Form {...form}>
                                         <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -301,7 +177,7 @@ const Stomatology: React.FC = () => {
                                                             <Input
                                                                 placeholder="Имя"
                                                                 {...field}
-                                                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
+                                                                className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
                                                             />
                                                         </FormControl>
                                                         <FormMessage />
@@ -312,85 +188,200 @@ const Stomatology: React.FC = () => {
                                                 control={form.control}
                                                 name="phoneNumber"
                                                 render={({ field }) => (
-                                                    <FormItem className="mb-[2.625rem]">
+                                                    <FormItem className="mb-6">
                                                         <FormControl>
                                                             <Input
                                                                 type="tel"
                                                                 placeholder="Телефон номера"
                                                                 {...field}
-                                                                className="rounded-[1.25rem] border-none font-normal placeholder:text-[#c0b8b8]"
+                                                                className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
                                                             />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>
                                                 )}
                                             />
-                                            <Button
-                                                type="submit"
-                                                className="w-full rounded-[1.25rem] bg-[#fffcfc] text-lg font-bold uppercase text-black hover:bg-neutral-200"
-                                            >
+                                            <Button type="submit" className="w-full rounded-xl bg-secondary text-lg font-semibold text-white shadow-premium transition-transform hover:-translate-y-0.5 hover:bg-secondary/90">
                                                 отправить
                                             </Button>
                                         </form>
                                     </Form>
                                     <DialogFooter>
-                                        <p className="text-center text-[.625rem] font-light">
-                                            Используя наш сайт, вы подтверждаете согласие с этой
-                                            политикой обработки персональных данных и разрешаете нам
-                                            обрабатывать ваши данные в соответствии с её положениями.
+                                        <p className="text-center text-[.75rem] text-foreground/60">
+                                            Используя наш сайт, вы подтверждаете согласие с политикой обработки персональных данных.
                                         </p>
                                     </DialogFooter>
                                 </DialogContent>
                             </Dialog>
+                            <Link
+                                href="/contacts"
+                                className="inline-block w-full rounded-xl bg-white px-6 py-4 text-center font-semibold text-primary ring-1 ring-primary/20 transition-all hover:ring-primary/30 min-[580px]:w-[15.25rem]"
+                            >
+                                Консультация
+                            </Link>
                         </div>
-                    ))}
+                    </div>
+                    <div className="relative h-[260px] w-full sm:h-[320px]">
+                        <Image
+                            src="/stamatology/slide-Photoroom.png"
+                            alt="Стоматологические инструменты"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 56vw"
+                            className="object-contain"
+                        />
+                    </div>
                 </div>
             </section>
 
-            <section className="mt-16 px-4 sm:px-6">
-                <h2 className="font-sans font-normal text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
-                    Основные направления стоматологии:
-                </h2>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
-                    {directions.map((direction, index) => (
-                        <div key={index} className="bg-[#F4F4F4] p-6 rounded-[15px] w-full max-w-[238px] h-auto lg:h-[294px] shadow-[0px_4px_4px_0px_#00000040]">
-                            <h3 className="font-sans font-normal text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] mb-2 sm:mb-3">
-                                {direction.title}
-                            </h3>
-
-                            <p className="font-sans font-light text-[14px] sm:text-[16px] leading-[18px] sm:leading-[19.5px] text-gray-600">
-                                {direction.description}
-                            </p>
-                        </div>
-                    ))}
+            {/* Doctors */}
+            <section className="mt-12 px-4 sm:px-6">
+                <div className="mx-auto max-w-[1340px]">
+                    <h2 className="mb-6 text-2xl font-extrabold tracking-tight sm:text-3xl">Наши стоматологи</h2>
+                    <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        {doctors.map((doctor, index) => (
+                            <div key={index} className="flex h-auto w-full max-w-[300px] flex-col items-center rounded-2xl border border-border bg-white p-6 shadow-soft">
+                                <Image
+                                    src={doctor.image}
+                                    alt={doctor.name}
+                                    width={100}
+                                    height={100}
+                                    className="mb-4 h-[100px] w-[100px] rounded-full object-cover"
+                                />
+                                <h3 className="mb-1 text-center text-[18px] font-semibold sm:text-[22px]">
+                                    {doctor.name}
+                                </h3>
+                                <p className="mb-1 text-center text-xs text-foreground/70 sm:text-sm">
+                                    {doctor.position}
+                                </p>
+                                <p className="mt-3 mb-2 text-center text-xs text-foreground/70 sm:text-sm">
+                                    {doctor.specialization}
+                                </p>
+                                <p className="mb-2 text-center text-xs text-foreground/70 sm:text-sm">{doctor.experience}</p>
+                                <p className="mb-4 text-center text-xs text-foreground/70 sm:text-sm">{doctor.schedule}</p>
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Button className="mt-auto h-[46px] w-full max-w-[198px] rounded-xl bg-primary text-white transition-colors hover:bg-primary/90">
+                                            Записаться
+                                        </Button>
+                                    </DialogTrigger>
+                                    <DialogContent className="border-border bg-white sm:rounded-xl">
+                                        <DialogHeader>
+                                            <DialogTitle className="text-xl font-semibold">Записаться к нам:</DialogTitle>
+                                        </DialogHeader>
+                                        <Form {...form}>
+                                            <form onSubmit={form.handleSubmit(onSubmit)}>
+                                                <FormField
+                                                    control={form.control}
+                                                    name="name"
+                                                    render={({ field }) => (
+                                                        <FormItem className="mb-4">
+                                                            <FormControl>
+                                                                <Input
+                                                                    placeholder="Имя"
+                                                                    {...field}
+                                                                    className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
+                                                                />
+                                                            </FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )}
+                                                />
+                                                <FormField
+                                                    control={form.control}
+                                                    name="phoneNumber"
+                                                    render={({ field }) => (
+                                                        <FormItem className="mb-6">
+                                                            <FormControl>
+                                                                <Input
+                                                                    type="tel"
+                                                                    placeholder="Телефон номера"
+                                                                    {...field}
+                                                                    className="rounded-xl border-input font-normal placeholder:text-[#9aa3ab] focus-visible:ring-2 focus-visible:ring-primary"
+                                                                />
+                                                            </FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )}
+                                                />
+                                                <Button type="submit" className="w-full rounded-xl bg-secondary text-lg font-semibold text-white shadow-premium transition-transform hover:-translate-y-0.5 hover:bg-secondary/90">
+                                                    отправить
+                                                </Button>
+                                            </form>
+                                        </Form>
+                                        <DialogFooter>
+                                            <p className="text-center text-[.75rem] text-foreground/60">
+                                                Используя наш сайт, вы подтверждаете согласие с политикой обработки персональных данных.
+                                            </p>
+                                        </DialogFooter>
+                                    </DialogContent>
+                                </Dialog>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            <section className="mt-16 mb-[120px] px-4 sm:px-6">
-                <h2 className="font-sans font-normal text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24.38px] mb-6 sm:mb-8">
-                    Советы по уходу за зубами:
-                </h2>
+            {/* Directions */}
+            <section className="mt-12 px-4 sm:px-6">
+                <div className="mx-auto max-w-[1340px]">
+                    <h2 className="mb-6 text-2xl font-extrabold tracking-tight sm:text-3xl">Направления</h2>
+                    <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-5">
+                        {directions.map((direction, index) => (
+                            <div key={index} className="h-auto w-full max-w-[238px] rounded-2xl border border-border bg-white p-6 shadow-soft">
+                                <h3 className="mb-2 text-[14px] font-semibold sm:text-[16px]">{direction.title}</h3>
+                                <p className="text-[14px] text-foreground/70 sm:text-[16px]">{direction.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-[3.51%]">
-                    <div className="w-full lg:w-[41.3%] flex justify-center lg:justify-start">
+            {/* Pricing */}
+            <section className="mt-12 px-4 sm:px-6">
+                <div className="mx-auto max-w-[1340px]">
+                    <h2 className="mb-4 text-2xl font-extrabold tracking-tight sm:text-3xl">Цены</h2>
+                    <div className="overflow-hidden rounded-2xl border border-border">
+                        <div className="grid grid-cols-3 bg-muted px-4 py-3 text-sm text-foreground/60">
+                            <div>Услуга</div>
+                            <div>Описание</div>
+                            <div className="text-right">Цена</div>
+                        </div>
+                        {[ 
+                            ["Первичная консультация", "Осмотр, рекомендации", "7 000 тг"],
+                            ["Гигиена полости рта", "Профессиональная чистка", "18 000 тг"],
+                            ["Пломба композитная", "Восстановление формы", "22 000 тг"],
+                            ["Отбеливание", "Профессиональная система", "45 000 тг"],
+                        ].map((row, i) => (
+                            <div key={i} className="grid grid-cols-3 items-center px-4 py-4 text-sm ring-1 ring-border/60 first:ring-0">
+                                <div className="font-medium">{row[0]}</div>
+                                <div className="text-foreground/70">{row[1]}</div>
+                                <div className="text-right font-semibold">{row[2]}</div>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="mt-2 text-xs text-foreground/60">Итоговая стоимость зависит от диагноза и объема лечения.</p>
+                </div>
+            </section>
+
+            {/* Tips */}
+            <section className="mt-12 px-4 sm:px-6">
+                <div className="mx-auto flex max-w-[1340px] flex-col items-start justify-between gap-8 lg:flex-row lg:gap-[3.51%]">
+                    <div className="w-full lg:w-[41.3%]">
                         <Image
                             src="/stamatology/teeth.png"
                             alt="Уход за зубами"
                             width={750}
                             height={280}
-                            className="object-contain w-full"
+                            className="w-full object-contain"
                         />
                     </div>
                     <div className="w-full lg:w-1/2">
-                        <div className="flex flex-col gap-4 lg:gap-[20px]">
+                        <h2 className="mb-4 text-2xl font-extrabold tracking-tight sm:text-3xl">Советы по уходу</h2>
+                        <div className="flex flex-col gap-4 lg:gap-5">
                             {dentalCareAdvices.map((advice, index) => (
-                                <div 
-                                    key={index} 
-                                    className="bg-gray-50 p-4 rounded-[10px] flex items-start w-full max-w-[759px] min-h-[62px]"
-                                >
-                                    <span className="text-blue-400 mr-3 flex-shrink-0">•</span>
-                                    <p className="text-gray-600 font-sans font-light text-[14px] sm:text-[16px]">{advice.tip}</p>
+                                <div key={index} className="flex min-h-[62px] w-full max-w-[759px] items-start rounded-2xl bg-gray-50 p-4">
+                                    <span className="mr-3 flex-shrink-0 text-blue-400">•</span>
+                                    <p className="text-sm text-foreground/70 sm:text-base">{advice.tip}</p>
                                 </div>
                             ))}
                         </div>
@@ -398,6 +389,25 @@ const Stomatology: React.FC = () => {
                 </div>
             </section>
 
+            {/* FAQ */}
+            <section className="mt-12 mb-24 px-4 sm:px-6">
+                <div className="mx-auto max-w-[1340px]">
+                    <h2 className="mb-4 text-2xl font-extrabold tracking-tight sm:text-3xl">FAQ</h2>
+                    <div className="grid gap-3 md:grid-cols-2">
+                        {[
+                            { q: "Больно ли лечить кариес?", a: "Мы используем современную анестезию и щадящие методики — лечение проходит комфортно." },
+                            { q: "Сколько длится прием?", a: "Первичный прием 20–40 минут, в зависимости от задачи." },
+                            { q: "Нужна ли подготовка к чистке?", a: "Нет, достаточно стандартной гигиены. Врач все объяснит на месте." },
+                            { q: "Делаете ли лечение в рассрочку?", a: "Доступна у партнеров. Уточняйте у администратора." },
+                        ].map((item, i) => (
+                            <details key={i} className="group rounded-2xl border border-border p-5">
+                                <summary className="cursor-pointer list-none text-base font-medium">{item.q}</summary>
+                                <div className="mt-2 text-sm text-foreground/70">{item.a}</div>
+                            </details>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </>
     );
 };

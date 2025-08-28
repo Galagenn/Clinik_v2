@@ -7,16 +7,16 @@ interface NavbarProps {
   onClose: () => void;
 }
 
-const menuList = [
+export const menuList = [
   {
     id: 1,
-    name: "О клинике",
-    href: "/about-us",
+    name: "Услуги",
+    href: "/services",
   },
   {
     id: 2,
-    name: "Услуги",
-    href: "/services",
+    name: "Врачи",
+    href: "/doctors",
   },
   {
     id: 3,
@@ -25,13 +25,13 @@ const menuList = [
   },
   {
     id: 4,
-    name: "Врачи",
-    href: "/doctors",
+    name: "Отзывы",
+    href: "/reviews",
   },
   {
     id: 5,
-    name: "Отзывы",
-    href: "/reviews",
+    name: "О клинике",
+    href: "/about-us",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const menuList = [
 export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
   return (
     <div
-      className={cn("hidden md:block md:shadow-sm", {
+      className={cn("hidden md:hidden", {
         "fixed inset-0 z-40 block md:hidden": isMenuOpen,
       })}
     >
@@ -79,13 +79,13 @@ export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
           </button>
         )}
         <nav>
-          <ul className="flex min-h-12 flex-col items-center justify-between gap-4 md:flex-row">
+          <ul className="flex min-h-12 flex-col items-stretch justify-between gap-2 md:flex-row">
             {menuList.map((menuItem) => (
               <li key={menuItem.id}>
                 <Link
                   href={menuItem.href}
                   onClick={isMenuOpen ? onClose : undefined}
-                  className="rounded-xl px-3 py-2 text-sm font-semibold text-foreground/80 transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-foreground"
+                  className="block rounded-xl px-4 py-3 text-base font-semibold text-foreground/80 transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-foreground"
                 >
                   {menuItem.name}
                 </Link>
