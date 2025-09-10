@@ -13,6 +13,40 @@ export default function AboutUs() {
             <p className="mt-4 text-base leading-7 text-foreground/70">
               Международный медицинский центр &quot;International Clinic of Asia&quot; – многопрофильный медицинский центр в г. Астана. Клиника предлагает широкий спектр медицинских услуг: консультации специалистов, диагностические исследования, дневной стационар, медосмотры и оформление справок. Оснащена современным оборудованием.
             </p>
+            <div className="mt-4 space-y-3 text-base leading-7 text-foreground/70">
+              <p>
+                Международный медицинский центр &quot;International Clinic of Asia&quot; – многопрофильный медицинский центр, расположенный в г. Астана. Клиника предлагает широкий спектр медицинских услуг, включая:
+              </p>
+              <div>
+                <div className="font-semibold text-foreground">Консультации специалистов:</div>
+                <ul className="mt-1 list-disc pl-5">
+                  <li>терапевт</li>
+                  <li>хирург</li>
+                  <li>акушер-гинеколог</li>
+                  <li>оториноларинголог</li>
+                  <li>кардиолог</li>
+                  <li>невропатолог</li>
+                  <li>офтальмолог</li>
+                  <li>дерматовенеролог</li>
+                  <li>рентгенолог</li>
+                  <li>профпатолог</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-foreground">Диагностические исследования:</div>
+                <ul className="mt-1 list-disc pl-5">
+                  <li>лабораторная диагностика</li>
+                  <li>рентген</li>
+                  <li>ЭКГ</li>
+                </ul>
+              </div>
+              <p>
+                Дневной стационар с возможностью проведения различных процедур. Медосмотры, оформление справок (037/у), (038/у), (073/у), (075/у), (028/у), (076/у), (069/у), (071/у), и санитарных книжек.
+              </p>
+              <p>
+                Клиника оснащена современным оборудованием и предоставляет услуги высокого качества. Для удобства пациентов предусмотрены скидки для пенсионеров, инвалидов и ветеранов в размере 50% на все услуги.
+              </p>
+            </div>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-lg font-semibold">15+ лет</div>
@@ -73,3 +107,5 @@ export default function AboutUs() {
     </section>
   );
 }
+
+

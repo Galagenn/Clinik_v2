@@ -1,9 +1,27 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+
+// SVG Star Icon Component
+const StarIcon = ({ filled, onClick, className = "" }: { filled: boolean; onClick?: () => void; className?: string }) => (
+  <svg
+    onClick={onClick}
+    className={`w-5 h-5 cursor-pointer transition-colors ${filled ? 'text-yellow-400 fill-current' : 'text-gray-300'} ${onClick ? 'hover:text-yellow-400' : ''} ${className}`}
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+  </svg>
+);
 
 export default function Reviews() {
+  const [selectedRating, setSelectedRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+
   return (
     <div className="wrapper">
       <Header />
@@ -89,9 +107,7 @@ export default function Reviews() {
                       <div className="text-right">
                         <div className="flex items-center gap-1">
                           {[...Array(5)].map((_, i) => (
-                            <span key={i} className={`text-lg ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`}>
-                              ★
-                            </span>
+                            <StarIcon key={i} filled={i < review.rating} />
                           ))}
                         </div>
                         <div className="text-xs text-foreground/60">{review.date}</div>
@@ -134,9 +150,7 @@ export default function Reviews() {
                     <div className="mb-3 flex items-center gap-2">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <span key={i} className={`text-sm ${i < Math.floor(category.rating) ? 'text-yellow-400' : 'text-gray-300'}`}>
-                            ★
-                          </span>
+                          <StarIcon key={i} filled={i < Math.floor(category.rating)} />
                         ))}
                       </div>
                       <span className="text-sm font-medium">{category.rating}</span>
@@ -176,14 +190,12 @@ export default function Reviews() {
                       <div className="text-right">
                         <div className="flex items-center gap-1">
                           {[...Array(5)].map((_, i) => (
-                            <span key={i} className={`text-sm ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`}>
-                              ★
-                            </span>
+                            <StarIcon key={i} filled={i < review.rating} />
                           ))}
                         </div>
                         <div className="text-xs text-foreground/60">{review.date}</div>
                       </div>
-              </div>
+                    </div>
                     <p className="mt-3 text-sm text-foreground/80">{review.text}</p>
                   </div>
                 ))}
@@ -254,11 +266,27 @@ export default function Reviews() {
                       <label className="mb-2 block text-sm font-medium">Оценка *</label>
                       <div className="flex items-center gap-2">
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <button key={star} type="button" className="text-2xl text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
-                            ★
+                          <button
+                            key={star}
+                            type="button"
+                            className="text-2xl transition-colors"
+                            onMouseEnter={() => setHoverRating(star)}
+                            onMouseLeave={() => setHoverRating(0)}
+                            onClick={() => setSelectedRating(star)}
+                          >
+                            <StarIcon 
+                              filled={star <= (hoverRating || selectedRating)} 
+                              onClick={() => setSelectedRating(star)}
+                              className="w-8 h-8"
+                            />
                           </button>
                         ))}
                       </div>
+                      {selectedRating > 0 && (
+                        <div className="mt-2 text-sm text-foreground/60">
+                          Выбрано: {selectedRating} {selectedRating === 1 ? 'звезда' : selectedRating < 5 ? 'звезды' : 'звезд'}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <label className="mb-2 block text-sm font-medium">Отзыв *</label>
@@ -292,7 +320,13 @@ export default function Reviews() {
                   { q: "Сколько времени проходит до публикации отзыва?", a: "Отзывы проходят модерацию и публикуются в течение 24 часов в рабочее время." },
                   { q: "Можно ли отредактировать или удалить отзыв?", a: "Да, вы можете отредактировать или удалить свой отзыв, связавшись с нами по телефону или email." },
                   { q: "Почему мой отзыв не опубликован?", a: "Отзывы не публикуются, если они содержат нецензурную лексику, оскорбления или не соответствуют правилам сайта." },
-                  { q: "Как связаться с клиникой по поводу отзыва?", a: "Вы можете позвонить по телефону 87026982336 или написать на email clinic@example.com." },
+                  { q: "Как связаться с клиникой по поводу отзыва?", a: (
+                    <>
+                      Вы можете позвонить по телефону {""}
+                      <a href="tel:+77026982336" className="text-primary underline">+7 702 698 2336</a>{" "}
+                      или написать на email clinic@example.com.
+                    </>
+                  ) },
                 ].map((item, i) => (
                   <details key={i} className="group rounded-2xl border border-border p-5">
                     <summary className="cursor-pointer list-none text-base font-medium">
@@ -312,16 +346,15 @@ export default function Reviews() {
             <div className="mx-auto max-w-6xl rounded-3xl bg-black px-6 py-12 text-white sm:px-10 sm:py-16">
               <div className="grid items-center gap-8 md:grid-cols-2">
                 <div>
-                  <h3 className="text-2xl font-semibold sm:text-3xl">Поделитесь своим опытом</h3>
-                  <p className="mt-3 text-white/70">Ваш отзыв поможет другим пациентам сделать правильный выбор и улучшит качество наших услуг.</p>
+                  <h3 className="text-2xl font-semibold sm:text-3xl">Готовы позаботиться о вашем здоровье</h3>
+                  <p className="mt-3 text-white/70">Оставьте контакты — администратор перезвонит и подберет удобное время.</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <Link href="#add-review" className="rounded-xl bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary/90">
-                    Оставить отзыв
-                  </Link>
-                  <Link href="/services" className="rounded-xl bg-white px-6 py-3 text-center text-sm font-semibold text-black transition-colors hover:bg-white/90">
-                    Наши услуги
-                  </Link>
+                  <input placeholder="Имя" className="h-11 rounded-xl bg-white/10 px-4 text-sm outline-none ring-1 ring-white/10 placeholder:text-white/50 focus:ring-white/30" />
+                  <input placeholder="Телефон" className="h-11 rounded-xl bg-white/10 px-4 text-sm outline-none ring-1 ring-white/10 placeholder:text-white/50 focus:ring-white/30" />
+                  <button className="col-span-1 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-white/90 sm:col-span-2">
+                    Отправить заявку
+                  </button>
                 </div>
               </div>
             </div>

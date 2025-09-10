@@ -258,10 +258,16 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Контакты</h2>
                 <div className="mt-4 space-y-2 text-sm text-foreground/80">
                   <div><span className="text-foreground/60">Телефон:</span></div>
-                  <div>87026982336</div>
-                  <div><span className="text-foreground/60">Адрес:</span> Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
+                  <div>
+                    <a href="tel:+77026982336" className="hover:text-primary transition-colors">+7 702 698 2336</a>
+                  </div>
+                  <div>
+                    <span className="text-foreground/60">Адрес:</span>{" "}
+                    <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</a>
+                  </div>
                   <div><span className="text-foreground/60">Режим работы:</span></div>
                   <div>Пн–Пт: 08:00–17:00</div>
+                  <div className="font-medium">Обед: 13:00 - 14:00</div>
                   <div>Сб: 08:00–13:00 (рентген/флюорография)</div>
                   <div>Вс: выходной</div>
                 </div>

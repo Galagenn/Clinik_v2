@@ -43,8 +43,8 @@ export const menuList = [
 export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
   return (
     <div
-      className={cn("hidden md:hidden", {
-        "fixed inset-0 z-40 block md:hidden": isMenuOpen,
+      className={cn("hidden lg:hidden", {
+        "fixed inset-0 z-40 block lg:hidden": isMenuOpen,
       })}
     >
       {isMenuOpen && (
@@ -58,17 +58,17 @@ export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
         className={cn(
           "container !max-w-[73.25rem] space-y-4",
           // Mobile panel styles
-          "md:static md:bg-transparent",
+          "lg:static lg:bg-transparent",
           isMenuOpen
             ? "fixed inset-x-0 top-0 bg-white pb-4 pt-20 shadow-sm transition-transform duration-300 ease-out translate-y-0"
-            : "-translate-y-full md:translate-y-0",
+            : "-translate-y-full lg:translate-y-0",
         )}
       >
         {isMenuOpen && (
           <button
             aria-label="Закрыть меню"
             onClick={onClose}
-            className="absolute right-4 top-4 inline-flex size-10 items-center justify-center rounded-xl bg-muted text-foreground/70 shadow-soft transition-colors hover:bg-primary hover:text-white md:hidden"
+            className="absolute right-4 top-4 inline-flex size-10 items-center justify-center rounded-xl bg-muted text-foreground/70 shadow-soft transition-colors hover:bg-primary hover:text-white lg:hidden"
           >
             <X className="size-5" />
           </button>
@@ -106,14 +106,16 @@ export default function Navbar({ isMenuOpen, onClose }: NavbarProps) {
                   href="tel:+77026982336"
                   className="block text-sm font-semibold text-primary underline"
                 >
-                  87026982336
+                  +7 702 698 2336
                 </a>
               </div>
             </div>
             
             {/* Адрес и время работы */}
             <div className="text-xs text-foreground/60">
-              <p>Казахстан, г. Астана, ул. Мәскеу, 11А, 010000</p>
+              <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                Казахстан, г. Астана, ул. Мәскеу, 11А, 010000
+              </a>
               <p>Пн–Пт: 08:00–17:00, Сб: 08:00–13:00 (рентген/флюорография)</p>
             </div>
             

@@ -47,17 +47,18 @@ export default function Contacts() {
                 <div>
                   <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Основная информация</h2>
                   <div className="mt-6 space-y-4">
-                                                 <div className="flex items-start gap-4">
-                               <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                                 <Image src="/contacts/icons/contacts.png" alt="Телефон" width={20} height={20} className="h-5 w-5" />
-                               </div>
-                               <div>
-                                 <div className="font-semibold">Телефон</div>
-                                 <div className="text-foreground/70">87026982336</div>
-                                 <div className="text-sm text-foreground/60">В рабочее время</div>
-                               </div>
-                             </div>
-                    <div className="flex items-start gap-4">
+                    <a href="tel:+77026982336" className="w-full flex items-start gap-4 p-4 rounded-2xl border border-border hover:bg-muted/50 transition-colors text-left">
+                      <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                        <Image src="/contacts/icons/contacts.png" alt="Телефон" width={20} height={20} className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <div className="font-semibold">Телефон</div>
+                        <div className="text-foreground/70">+7 702 698 2336</div>
+                        <div className="text-sm text-foreground/60">В рабочее время</div>
+                      </div>
+                    </a>
+                    
+                    <a href="mailto:clinic@example.com" className="w-full flex items-start gap-4 p-4 rounded-2xl border border-border hover:bg-muted/50 transition-colors text-left">
                       <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
                         <Image src="/contacts/icons/gmail.png" alt="Email" width={20} height={20} className="h-5 w-5" />
                       </div>
@@ -66,17 +67,18 @@ export default function Contacts() {
                         <div className="text-foreground/70">clinic@example.com</div>
                         <div className="text-sm text-foreground/60">Ответим в течение 2 часов</div>
                       </div>
-                    </div>
-                                                 <div className="flex items-start gap-4">
-                               <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                                 <Image src="/contacts/icons/location.png" alt="Адрес" width={20} height={20} className="h-5 w-5" />
-                               </div>
-                               <div>
-                                 <div className="font-semibold">Адрес</div>
-                                 <div className="text-foreground/70">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
-                                 <div className="text-sm text-foreground/60">Центр города</div>
-                               </div>
-                             </div>
+                    </a>
+                    
+                    <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="w-full flex items-start gap-4 p-4 rounded-2xl border border-border hover:bg-muted/50 transition-colors text-left">
+                      <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                        <Image src="/contacts/icons/location.png" alt="Адрес" width={20} height={20} className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <div className="font-semibold">Адрес</div>
+                        <div className="text-foreground/70">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
+                        <div className="text-sm text-foreground/60">Центр города</div>
+                      </div>
+                    </a>
                     
                   </div>
                 </div>
@@ -89,6 +91,10 @@ export default function Contacts() {
                                  <div className="flex justify-between">
                                    <span>Понедельник - Пятница</span>
                                    <span className="font-medium">08:00 - 17:00</span>
+                                 </div>
+                                 <div className="flex justify-between">
+                                   <span>Обед</span>
+                                   <span className="font-medium">13:00 - 14:00</span>
                                  </div>
                                  <div className="flex justify-between">
                                    <span>Суббота</span>
@@ -108,71 +114,6 @@ export default function Contacts() {
           </div>
         </section>
 
-        {/* Address Info */}
-        <section className="bg-white">
-          <div className="container">
-            <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div>
-                  <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Адрес клиники</h2>
-                  <div className="mt-6 space-y-4">
-                    <div className="rounded-2xl border border-border p-6">
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                          <Image src="/contacts/icons/location.png" alt="Адрес" width={24} height={24} className="h-6 w-6" />
-                        </div>
-                        <div>
-                                                     <div className="text-lg font-semibold">Основной адрес</div>
-                           <div className="text-foreground/70">г. Астана, ул. Мәскеу, 11А, 010000</div>
-                         </div>
-                       </div>
-                       <div className="text-sm text-foreground/60">
-                         Район: Центральный район<br />
-                         Ориентир: центр города<br />
-                         Координаты: 51.1801° N, 71.4460° E
-                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Как добраться</h2>
-                  <div className="mt-6 space-y-4">
-                    <div className="rounded-2xl border border-border p-6">
-                      <h3 className="mb-4 text-lg font-semibold">Транспорт</h3>
-                      <div className="space-y-3 text-sm text-foreground/70">
-                                                 <div className="flex items-center gap-2">
-                           <span className="size-2 rounded-full bg-primary"></span>
-                           <span><strong>Автобусы:</strong> №1, №2, №3, №4 (остановка &quot;Центр&quot;)</span>
-                         </div>
-                         <div className="flex items-center gap-2">
-                           <span className="size-2 rounded-full bg-primary"></span>
-                           <span><strong>Маршрутки:</strong> №101, №102, №103 (остановка &quot;Центр&quot;)</span>
-                         </div>
-                         <div className="flex items-center gap-2">
-                           <span className="size-2 rounded-full bg-primary"></span>
-                           <span><strong>Такси:</strong> круглосуточно</span>
-                         </div>
-                         <div className="flex items-center gap-2">
-                           <span className="size-2 rounded-full bg-primary"></span>
-                           <span><strong>Пешком:</strong> от центра города 10-15 минут</span>
-                         </div>
-                      </div>
-                    </div>
-                    <div className="rounded-2xl border border-border p-6">
-                      <h3 className="mb-4 text-lg font-semibold">Парковка</h3>
-                      <div className="space-y-2 text-sm text-foreground/70">
-                        <div>• Бесплатная парковка для пациентов</div>
-                        <div>• Охраняемая территория</div>
-                        <div>• Места для людей с ограниченными возможностями</div>
-                        <div>• Подземный паркинг (платный)</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Map Section */}
         <section id="map">
@@ -185,154 +126,46 @@ export default function Contacts() {
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="rounded-2xl border border-border bg-muted p-6">
                   <div className="aspect-video rounded-xl bg-white">
-                    <div className="flex h-full items-center justify-center text-foreground/60">
-                      [Интерактивная карта будет здесь]
-                    </div>
+                    <iframe id="map_144568307" frameBorder="0" width="100%" height="350px" src="https://makemap.2gis.ru/widget?data=eJw9UFtvgjAU_i_d44g5IFgg8cGVDDVoqC7xsviAUrELUlKKTon_fQW3neS8fLec8zVIyJRJloZMnJmSnFXI_2yQupUM-eidJaqWDBmolKJkUnV8gw4iF1LzL2C55tHSvOIqbx3LlQPb9bTerBfl3nJOe_IW7MO8TlazoZalrDpIXiouCi2Ox6NXmOLFaR4SiAJae-EMoju9KIIhwrS6BTyb0gyiD1rPyRWimF5S8gqb8SJTxIZI0opoX7seMWFzpColHkRfVC0DqrxwBNG69diwcXXOJJtpvOq8R50Zkph41zgbtsfdJ0XKvpFvwt88DJQ9i7m1b_-2EgteKK0_CF0eLxLVlYbNXt_rW-AZjtkzXejb5k77eYp8F8NjZ6BzUsai4s_nG5QnCvn_WmybNmAH2wbKW_4Zhy3LcV1vAAON34U46-tcnapbFHm-OjGWbztUyZo9fgDxQo3F" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
                   </div>
                   <div className="mt-4 text-sm text-foreground/70">
                     <p>Клиника расположена в центре города, рядом с основными транспортными магистралями. Удобный подъезд как на общественном транспорте, так и на личном автомобиле.</p>
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <div className="rounded-2xl border border-border p-6">
-                    <h3 className="mb-4 text-lg font-semibold">Пошаговая инструкция</h3>
-                    <div className="space-y-3 text-sm text-foreground/70">
-                                             <div className="flex items-start gap-3">
-                         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">1</span>
-                         <span>От центра города идите по ул. Мәскеу</span>
-                       </div>
-                       <div className="flex items-start gap-3">
-                         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">2</span>
-                         <span>Пройдите 200 метров от перекрестка</span>
-                       </div>
-                       <div className="flex items-start gap-3">
-                         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">3</span>
-                         <span>Клиника находится слева, здание с вывеской &quot;International Clinic of Asia&quot;</span>
-                       </div>
-                       <div className="flex items-start gap-3">
-                         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">4</span>
-                         <span>Вход с главной улицы</span>
-                       </div>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-border p-6">
-                    <h3 className="mb-4 text-lg font-semibold">Ориентиры</h3>
-                    <div className="space-y-2 text-sm text-foreground/70">
-                                             <div>• Рядом с центральной площадью (300 м)</div>
-                       <div>• Напротив парка &quot;Центральный&quot;</div>
-                       <div>• Рядом с остановкой &quot;Центр&quot;</div>
-                       <div>• Здание с вывеской &quot;International Clinic of Asia&quot;</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Parking */}
-        <section className="bg-white">
-          <div className="container">
-            <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
-              <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">Парковка</h2>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { type: "Бесплатная парковка", icon: "🅿️", description: "Для пациентов клиники", features: ["Охраняемая территория", "Видеонаблюдение", "Освещение", "Места для инвалидов"], capacity: "20 мест", availability: "В рабочее время" },
-                  { type: "Подземный паркинг", icon: "🚗", description: "Платный паркинг", features: ["Крытая парковка", "Электронные ворота", "Охрана 24/7", "Мойка автомобилей"], capacity: "50 мест", availability: "Круглосуточно" },
-                  { type: "Уличная парковка", icon: "🚙", description: "Вдоль улицы", features: ["Бесплатно", "Ограниченное время", "Паркоматы", "Штрафы за нарушение"], capacity: "15 мест", availability: "До 2 часов" },
-                ].map((parking, idx) => (
-                  <div key={idx} className="rounded-2xl border border-border p-6">
-                    <div className="mb-4 text-4xl">{parking.icon}</div>
-                    <h3 className="mb-2 text-lg font-semibold">{parking.type}</h3>
-                    <div className="mb-3 text-sm text-foreground/70">{parking.description}</div>
-                    <div className="mb-4">
-                      <div className="text-sm font-medium text-foreground/80 mb-2">Особенности:</div>
-                      <ul className="space-y-1">
-                        {parking.features.map((feature, fIdx) => (
-                          <li key={fIdx} className="flex items-center gap-2 text-sm text-foreground/70">
-                            <span className="size-1.5 rounded-full bg-primary"></span>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="grid grid-cols-2 gap-2 text-xs text-foreground/60">
-                      <div>Вместимость: <span className="font-medium">{parking.capacity}</span></div>
-                      <div>Доступность: <span className="font-medium">{parking.availability}</span></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+                  <div className="container">
+                    <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
 
-        {/* Accessibility */}
-        <section>
-          <div className="container">
-            <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
-              <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">Доступность</h2>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {[
-                  { feature: "Пандусы", icon: "♿", description: "Доступность для инвалидных колясок", status: "Доступно" },
-                  { feature: "Лифты", icon: "🛗", description: "Подъемники на все этажи", status: "Доступно" },
-                  { feature: "Туалеты", icon: "🚻", description: "Адаптированные санузлы", status: "Доступно" },
-                  { feature: "Парковка", icon: "🅿️", description: "Места для людей с ОВЗ", status: "Доступно" },
-                  { feature: "Тактильные указатели", icon: "👆", description: "Для слабовидящих", status: "Частично" },
-                  { feature: "Аудио-системы", icon: "🔊", description: "Для слабослышащих", status: "Планируется" },
-                  { feature: "Брайль", icon: "👁️", description: "Информация шрифтом Брайля", status: "Частично" },
-                  { feature: "Персонал", icon: "👨‍⚕️", description: "Обучение работе с ОВЗ", status: "Доступно" },
-                ].map((item, idx) => (
-                  <div key={idx} className="rounded-2xl border border-border p-6 text-center">
-                    <div className="mb-4 text-4xl">{item.icon}</div>
-                    <h3 className="mb-2 text-lg font-semibold">{item.feature}</h3>
-                    <p className="mb-3 text-sm text-foreground/70">{item.description}</p>
-                    <div className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${
-                      item.status === "Доступно" ? "bg-green-100 text-green-800" :
-                      item.status === "Частично" ? "bg-yellow-100 text-yellow-800" :
-                      "bg-gray-100 text-gray-800"
-                    }`}>
-                      {item.status}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+                          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Адрес клиники</h2>
+                          <div className="mt-6 space-y-4 border-border border-2 rounded-2xl p-6 hover:bg-muted/50 transition-colors">
+                            <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="w-full rounded-2xl p-6 text-left">
+                              <div className="mb-4 flex items-center gap-3">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                                  <Image src="/contacts/icons/location.png" alt="Адрес" width={24} height={24} className="h-6 w-6" />
+                                </div>
+                                <div>
+                                  <div className="text-lg font-semibold">Основной адрес</div>
+                                  <div className="text-foreground/70">г. Астана, ул. Мәскеу, 11А, 010000</div>
+                                </div>
+                              </div>
+                              <div className="text-sm text-foreground/60">
+                                Район: Центральный район<br />
+                                Ориентир: центр города<br />
+                                Координаты: 51.1801° N, 71.4460° E
+                              </div>
+                            </a>
+                          </div>
 
-        {/* Nearby Places */}
-        <section className="bg-white">
-          <div className="container">
-            <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
-              <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">Рядом с клиникой</h2>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { name: "ТРЦ 'Мега'", distance: "500 м", description: "Торгово-развлекательный центр", services: ["Магазины", "Рестораны", "Кинотеатр", "Развлечения"], icon: "🛍️" },
-                  { name: "Парк 'Здоровье'", distance: "200 м", description: "Городской парк для отдыха", services: ["Прогулки", "Спортивные площадки", "Детские зоны", "Кафе"], icon: "🌳" },
-                  { name: "Метро 'Алмалы'", distance: "300 м", description: "Станция метрополитена", services: ["Линия 1", "Линия 2", "Автобусы", "Маршрутки"], icon: "🚇" },
-                  { name: "Аптека 'Здоровье'", distance: "100 м", description: "Круглосуточная аптека", services: ["Лекарства", "Медицинские товары", "Консультации", "Доставка"], icon: "💊" },
-                  { name: "Банк 'Народный'", distance: "400 м", description: "Отделение банка", services: ["Кредиты", "Вклады", "Платежи", "Обмен валют"], icon: "🏦" },
-                  { name: "Кафе 'У врача'", distance: "150 м", description: "Медицинское кафе", services: ["Диетическое питание", "Свежие соки", "Здоровые закуски", "Wi-Fi"], icon: "☕" },
-                ].map((place, idx) => (
-                  <div key={idx} className="rounded-2xl border border-border p-6">
-                    <div className="mb-4 flex items-center gap-3">
-                      <div className="text-3xl">{place.icon}</div>
-                      <div>
-                        <h3 className="text-lg font-semibold">{place.name}</h3>
-                        <div className="text-sm text-primary font-medium">{place.distance}</div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-foreground/70">{place.description}</p>
-                    <div className="text-sm text-foreground/60">
-                      {place.services.join(" • ")}
                     </div>
                   </div>
-                ))}
+                
               </div>
             </div>
           </div>
         </section>
+ 
+
+
 
         {/* FAQ */}
         <section>
@@ -361,7 +194,7 @@ export default function Contacts() {
         </section>
 
         {/* CTA */}
-        <section className="relative isolate overflow-hidden">
+        <section id="book" className="relative isolate overflow-hidden">
           <div className="container">
             <div className="mx-auto max-w-6xl rounded-3xl bg-black px-6 py-12 text-white sm:px-10 sm:py-16">
               <div className="grid items-center gap-8 md:grid-cols-2">
@@ -370,12 +203,11 @@ export default function Contacts() {
                   <p className="mt-3 text-white/70">Теперь, когда вы знаете, как нас найти, запишитесь на прием в удобное для вас время.</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <a href="tel:+77026982336" className="rounded-xl bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary/90">
-                    Позвонить
-                  </a>
-                  <Link href="#book" className="rounded-xl bg-white px-6 py-3 text-center text-sm font-semibold text-black transition-colors hover:bg-white/90">
-                    Записаться
-                  </Link>
+                  <input placeholder="Имя" className="h-11 rounded-xl bg-white/10 px-4 text-sm outline-none ring-1 ring-white/10 placeholder:text-white/50 focus:ring-white/30" />
+                  <input placeholder="Телефон" className="h-11 rounded-xl bg-white/10 px-4 text-sm outline-none ring-1 ring-white/10 placeholder:text-white/50 focus:ring-white/30" />
+                  <button className="col-span-1 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-white/90 sm:col-span-2">
+                    Отправить заявку
+                  </button>
                 </div>
               </div>
             </div>

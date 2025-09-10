@@ -11,11 +11,17 @@ export default function Footer() {
         <div>
           <h4 className="mb-4 text-base font-semibold">Контакты</h4>
           <ul className="space-y-1 text-foreground/80">
-            <li>87026982336</li>
+            <li>
+              <a href="tel:+77026982336" className="hover:text-primary transition-colors">+7 702 698 2336</a>
+            </li>
             <li>Пн–Пт: 08:00–17:00</li>
             <li>Сб: 08:00–13:00 (рентген/флюорография)</li>
             <li>Вс: выходной</li>
-            <li>Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</li>
+            <li>
+              <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                Казахстан, г. Астана, ул. Мәскеу, 11А, 010000
+              </a>
+            </li>
           </ul>
         </div>
         <div>
@@ -39,13 +45,13 @@ export default function Footer() {
           <h4 className="mb-4 text-base font-semibold">Правовая информация</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="/" className="text-foreground/80 transition-colors hover:text-foreground">Политика конфиденциальности</Link>
+              <Link href="/privacy-policy" className="text-foreground/80 transition-colors hover:text-foreground">Политика конфиденциальности</Link>
             </li>
             <li>
-              <Link href="/" className="text-foreground/80 transition-colors hover:text-foreground">Согласие на обработку ПД</Link>
+              <Link href="/consent" className="text-foreground/80 transition-colors hover:text-foreground">Согласие на обработку ПД</Link>
             </li>
             <li>
-              <Link href="/" className="text-foreground/80 transition-colors hover:text-foreground">Условия использования</Link>
+              <Link href="/terms" className="text-foreground/80 transition-colors hover:text-foreground">Условия использования</Link>
             </li>
           </ul>
         </div>

@@ -4,12 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
 import Logo from "./logo";
-import { useMobile } from "./hooks/use-mobile";
 import Navbar from "./navbar";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  useMobile();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,24 +24,31 @@ export default function Header() {
         <div className="container">
           <div className="flex items-center justify-between py-2 text-xs text-foreground/70">
             <div className="flex items-center gap-6">
+              
               <div className="flex items-center gap-2">
                 <Phone className="h-3 w-3" />
-                <span>87026982336</span>
+                <a href="tel:+77026982336" className="hover:text-primary transition-colors">
+                  +7 702 698 2336
+                </a>
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <MapPin className="h-3 w-3" />
-                <span>Казахстан, г. Астана, ул. Мәскеу, 11А, 010000</span>
+                <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Казахстан, г. Астана, ул. Мәскеу, 11А, 010000
+                </a>
               </div>
               <div className="hidden lg:flex items-center gap-2">
                 <Clock className="h-3 w-3" />
                 <span>Пн–Пт: 08:00–17:00</span>
               </div>
+
+              
             </div>
             <div className="flex items-center gap-4">
-              <div className="hidden sm:flex items-center gap-2 text-xs text-foreground/60">
+              <Link href="#book" className="hidden sm:flex items-center gap-2 text-xs text-foreground/60">
                 <span>Запись и консультация</span>
+              </Link>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -55,7 +60,7 @@ export default function Header() {
           <Logo />
 
           {/* Навигация для десктопа */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-8">
             <Link 
               href="/services" 
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
@@ -95,13 +100,8 @@ export default function Header() {
           </nav>
 
           {/* Кнопки для десктопа */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link 
-              href="/contacts" 
-              className="rounded-lg px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Контакты
-            </Link>
+          <div className="hidden xl:flex items-center gap-3">
+
             <Link 
               href="#book" 
               className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition-colors"

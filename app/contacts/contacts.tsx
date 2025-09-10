@@ -10,11 +10,11 @@ export default function Contacts() {
             <div className="space-y-4">
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-base font-semibold">Адрес</div>
-                <div className="mt-1 text-sm text-foreground/70">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</div>
+                <a href="https://go.2gis.com/jUVuo" target="_blank" rel="noopener noreferrer" className="mt-1 text-sm text-foreground/70 hover:text-primary transition-colors">Казахстан, г. Астана, улица Мәскеу, дом 11А, 010000</a>
               </div>
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-base font-semibold">Телефон</div>
-                <div className="mt-1 text-sm text-foreground/70">87026982336</div>
+                <a href="tel:+77026982336" className="mt-1 text-sm text-foreground/70 hover:text-primary transition-colors">+7 702 698 2336</a>
               </div>
               <div className="rounded-2xl border border-border p-5">
                 <div className="text-base font-semibold">Email</div>

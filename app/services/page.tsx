@@ -146,7 +146,8 @@ export default function Services() {
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Прайс-лист</h2>
                 <div className="text-sm text-foreground/60">Актуальные цены на 2024 год</div>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-border">
+              {/* Desktop/tablet table */}
+              <div className="hidden overflow-hidden rounded-2xl border border-border sm:block">
                 <div className="grid grid-cols-4 bg-muted px-4 py-3 text-sm font-medium text-foreground/60">
                   <div>Услуга</div>
                   <div>Описание</div>
@@ -171,59 +172,34 @@ export default function Services() {
                   </div>
                 ))}
               </div>
+
+              {/* Mobile cards */}
+              <div className="sm:hidden grid gap-3">
+                {[
+                  ["Первичная консультация", "Осмотр, сбор анамнеза, рекомендации", "20-30 мин", "7 000 тг"],
+                  ["Расширенная консультация", "Детальный осмотр, план лечения", "40-60 мин", "12 000 тг"],
+                  ["УЗИ брюшной полости", "Обследование внутренних органов", "30-40 мин", "15 000 тг"],
+                  ["Анализ крови общий", "Клинический анализ крови", "1 день", "6 500 тг"],
+                  ["Рентген грудной клетки", "Цифровой снимок в двух проекциях", "15-20 мин", "8 000 тг"],
+                  ["Гигиена полости рта", "Профессиональная чистка зубов", "45-60 мин", "18 000 тг"],
+                  ["ЭКГ", "Электрокардиограмма с расшифровкой", "15-20 мин", "5 500 тг"],
+                  ["Прививка от гриппа", "Вакцинация против сезонного гриппа", "10-15 мин", "3 500 тг"],
+                ].map((row, idx) => (
+                  <div key={idx} className="rounded-2xl border border-border p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="text-base font-semibold">{row[0]}</div>
+                      <div className="shrink-0 text-sm font-bold text-primary">{row[3]}</div>
+                    </div>
+                    <div className="mt-1 text-sm text-foreground/70">{row[1]}</div>
+                    <div className="mt-2 text-xs text-foreground/60">Длительность: {row[2]}</div>
+                  </div>
+                ))}
+              </div>
               <p className="mt-3 text-xs text-foreground/60">* Итоговая стоимость зависит от сложности случая и объема лечения. Уточняйте у администратора.</p>
             </div>
           </div>
         </section>
 
-        {/* Insurance */}
-        <section>
-          <div className="container">
-            <div className="mx-auto !max-w-[88rem] py-12 sm:py-16">
-              <div className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-8 sm:p-12">
-                <div className="grid items-center gap-8 md:grid-cols-2">
-                  <div>
-                    <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Страхование и льготы</h2>
-                    <p className="mt-4 text-foreground/70">
-                      Мы работаем с ведущими страховыми компаниями и предоставляем скидки для различных категорий пациентов.
-                    </p>
-                    <div className="mt-6 space-y-3">
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Скидка 10% для пенсионеров</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Скидка 15% для многодетных семей</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Скидка 20% для медицинских работников</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl bg-white/80 p-6 backdrop-blur">
-                    <h3 className="mb-4 text-lg font-semibold">Страховые партнеры</h3>
-                    <div className="grid gap-3 text-sm">
-                      <div className="flex items-center justify-between">
-                        <span>АО &quot;Казахстанская страховая компания&quot;</span>
-                        <span className="text-primary font-medium">✓</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>ТОО &quot;Страховая компания &quot;Номад&quot;</span>
-                        <span className="text-primary font-medium">✓</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>АО &quot;Страховая компания &quot;Халык&quot;</span>
-                        <span className="text-primary font-medium">✓</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ */}
         <section className="bg-white">

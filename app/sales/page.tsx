@@ -91,10 +91,10 @@ export default function Sales() {
               <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">Специальные предложения</h2>
               <div className="grid gap-8 md:grid-cols-2">
                 {[
-                  { title: "День рождения пациента", description: "В день рождения получайте скидку 25% на любую услугу клиники", icon: "🎂", benefits: ["Скидка 25% на любую услугу", "Подарок от клиники", "Приоритетная запись", "Бонусные баллы"], validFor: "Только в день рождения" },
-                  { title: "Приведи друга", description: "Приведите друга в клинику и получите скидку 20% на следующий прием", icon: "👥", benefits: ["Скидка 20% на прием", "Бонус за каждого друга", "Накопительная система", "Специальные условия"], validFor: "Постоянно" },
-                  { title: "Семейный абонемент", description: "Скидки для семей с детьми на все виды медицинских услуг", icon: "👨‍👩‍👧‍👦", benefits: ["Скидка до 30%", "Единая карта семьи", "Специальные цены", "Приоритетное обслуживание"], validFor: "Постоянно" },
-                  { title: "Пенсионная программа", description: "Специальные цены и скидки для пенсионеров", icon: "👴", benefits: ["Скидка 15% на все услуги", "Бесплатные консультации", "Домашние визиты", "Социальные программы"], validFor: "Постоянно" },
+                  { title: "Справки 075/086/073/072/037/028/027", description: "Низкие цены по городу — готово за один день", icon: "📄", benefits: ["Оформление за 1 день", "Актуальные формы", "Низкие цены"], validFor: "Постоянно" },
+                  { title: "Флюорография, Рентген, ЭКГ, ВКК", description: "Комплекс диагностик по выгодным ценам", icon: "🩺", benefits: ["Современное оборудование", "Быстрые результаты", "Консультация специалиста"], validFor: "Постоянно" },
+                  { title: "Больничные листы", description: "Оформление и выдача больничных листов", icon: "📝", benefits: ["Законная выдача", "Оперативное оформление", "Консультация врача"], validFor: "Постоянно" },
+                  { title: "Скидки 50%", description: "Пенсионерам, инвалидам и ветеранам — скидка 50% на все услуги", icon: "🎖️", benefits: ["-50% на все услуги", "Без скрытых условий", "Ежедневно"], validFor: "Постоянно" },
                 ].map((offer, idx) => (
                   <div key={idx} className="rounded-2xl border border-border p-6">
                     <div className="mb-4 flex items-center gap-4">
@@ -168,62 +168,7 @@ export default function Sales() {
           </div>
         </section>
 
-        {/* Loyalty Program */}
-        <section className="bg-white">
-          <div className="container">
-            <div className="mx-auto !max-w-[88rem] py-12 sm:py-20">
-              <div className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-8 sm:p-12">
-                <div className="grid items-center gap-8 md:grid-cols-2">
-                  <div>
-                    <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Программа лояльности</h2>
-                    <p className="mt-4 text-foreground/70">
-                      Накопительная система скидок и бонусов для постоянных пациентов. Чем больше вы посещаете клинику, тем больше получаете выгод.
-                    </p>
-                    <div className="mt-6 space-y-3">
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Бронзовый уровень - скидка 5%</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Серебряный уровень - скидка 10%</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Золотой уровень - скидка 15%</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="size-2 rounded-full bg-primary"></span>
-                        <span className="text-sm">Платиновый уровень - скидка 20%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl bg-white/80 p-6 backdrop-blur">
-                    <h3 className="mb-4 text-lg font-semibold">Как накопить баллы</h3>
-                    <div className="space-y-3 text-sm">
-                      <div className="flex items-center justify-between">
-                        <span>Запись на прием</span>
-                        <span className="text-primary font-medium">+10 баллов</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>Рекомендация друзьям</span>
-                        <span className="text-primary font-medium">+50 баллов</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>Отзыв о клинике</span>
-                        <span className="text-primary font-medium">+25 баллов</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>День рождения</span>
-                        <span className="text-primary font-medium">+100 баллов</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Terms & Conditions */}
         <section>
