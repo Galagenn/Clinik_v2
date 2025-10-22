@@ -13,7 +13,7 @@ export default function Doctors() {
         <section className="relative isolate overflow-hidden bg-white">
           <div className="container">
             <div className="mx-auto !max-w-[88rem] py-16 sm:py-24">
-              <div className="grid items-center gap-10 md:grid-cols-2">
+              <div className="flex items-center gap-10 ">
                 <div>
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
                     Наши врачи
@@ -35,11 +35,7 @@ export default function Doctors() {
                     </Link>
                   </div>
                 </div>
-                <div className="relative">
-                  <div className="relative mx-auto w-full max-w-[40rem] overflow-hidden rounded-2xl ring-1 ring-border">
-                    <Image src="/testimonials/avatar.jpg" alt="Наши врачи" width={1200} height={900} className="h-auto w-full object-cover" />
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
