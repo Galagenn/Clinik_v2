@@ -119,7 +119,7 @@ export default function AboutUs() {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {doctors.slice(0, 6).map((m) => (
                   <div key={m.id} className="overflow-hidden rounded-2xl border border-border">
-                    <Image src={m.img} alt={m.role} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
+                    <Image src={m.img} alt={m.role} width={800} height={600} className="h-[25rem] w-full object-cover object-center" />
                     <div className="p-5">
                       <div className="text-lg font-semibold">{m.role}</div>
                       <div className="text-sm text-foreground/60">{m.specialization}</div>
