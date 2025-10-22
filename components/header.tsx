@@ -59,8 +59,8 @@ export default function Header() {
           {/* Логотип */}
           <Logo />
 
-          {/* Навигация для десктопа */}
-          <nav className="hidden xl:flex items-center gap-8">
+          {/* Навигация: скрыта до 1080px, видима с 1080px и выше */}
+          <nav className="hidden items-center gap-8 hd:flex">
             <Link 
               href="/services" 
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
@@ -99,8 +99,8 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Кнопки для десктопа */}
-          <div className="hidden xl:flex items-center gap-3">
+          {/* Кнопки: скрыты до 1080px, видимы с 1080px и выше */}
+          <div className="hidden items-center gap-3 hd:flex">
 
             <Link 
               href="#book" 
@@ -110,10 +110,10 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Мобильное меню */}
+          {/* Бургер: показать до 1080px, скрыть с 1080px */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-white text-foreground/70 hover:bg-muted hover:text-foreground transition-colors"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-white text-foreground/70 hover:bg-muted hover:text-foreground transition-colors hd:hidden"
             aria-label="Открыть меню"
           >
             {isMenuOpen ? (

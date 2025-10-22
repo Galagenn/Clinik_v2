@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Врач не найден" };
   }
   return {
-    title: `${doctor.name} — ${doctor.role}`,
-    description: `${doctor.name}: ${doctor.specialization}. Опыт: ${doctor.exp}. Запись на прием.`,
+    title: `${doctor.role}`,
+    description: `${doctor.specialization}. Опыт: ${doctor.exp}. Запись на прием.`,
   };
 }
 
@@ -46,14 +46,14 @@ export default async function DoctorPage({ params }: Props) {
                 <span className="mx-2">/</span>
                 <Link href="/doctors" className="hover:underline">Врачи</Link>
                 <span className="mx-2">/</span>
-                <span className="text-foreground">{doctor.name}</span>
+                <span className="text-foreground">{doctor.role}</span>
               </nav>
               <div className="grid items-start gap-8 md:grid-cols-5">
                 <div className="md:col-span-2">
                   <div className="relative overflow-hidden rounded-2xl ring-1 ring-border">
-                    <Image
-                      src={doctor.img}
-                      alt={doctor.name}
+                  <Image
+                    src={doctor.img}
+                    alt={doctor.role}
                       width={1000}
                       height={1200}
                       className="h-auto w-full object-cover"
@@ -64,8 +64,8 @@ export default async function DoctorPage({ params }: Props) {
                   </div>
                 </div>
                 <div className="md:col-span-3">
-                  <h1 className="text-3xl font-bold sm:text-4xl">{doctor.name}</h1>
-                  <div className="mt-1 text-foreground/70">{doctor.role}</div>
+                  <h1 className="text-3xl font-bold sm:text-4xl">{doctor.role}</h1>
+                  <div className="mt-1 text-foreground/70">{doctor.specialization}</div>
                   {doctor.tags && doctor.tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-2">
                       {doctor.tags.map((t) => (
@@ -182,12 +182,12 @@ export default async function DoctorPage({ params }: Props) {
                     .filter((d): d is Doctor => Boolean(d)) as Doctor[]).map((d) => (
                     <Link key={d.id} href={`/doctors/${d.id}`} className="overflow-hidden rounded-2xl border border-border transition-all hover:-translate-y-0.5">
                       <div className="relative">
-                        <Image src={d.img} alt={d.name} width={800} height={600} className="h-40 w-full object-cover" />
+                        <Image src={d.img} alt={d.role} width={800} height={600} className="h-40 w-full object-cover" />
                         <div className="absolute right-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-semibold text-primary">⭐ {d.rating}</div>
                       </div>
                       <div className="p-4">
-                        <div className="text-sm font-semibold">{d.name}</div>
-                        <div className="text-xs text-foreground/60">{d.role}</div>
+                        <div className="text-sm font-semibold">{d.role}</div>
+                        <div className="text-xs text-foreground/60">{d.specialization}</div>
                       </div>
                     </Link>
                   ))}
@@ -203,7 +203,7 @@ export default async function DoctorPage({ params }: Props) {
             <div className="mx-auto max-w-6xl rounded-3xl bg-black px-6 py-12 text-white sm:px-10 sm:py-16">
               <div className="grid items-center gap-8 md:grid-cols-2">
                 <div>
-                  <h3 className="text-2xl font-semibold sm:text-3xl">Запишитесь к {doctor.name}</h3>
+                  <h3 className="text-2xl font-semibold sm:text-3xl">Запишитесь к специалисту</h3>
                   <p className="mt-3 text-white/70">Оставьте контакты — администратор перезвонит и согласует удобное время приема.</p>
                 </div>
                 <form className="grid gap-3 sm:grid-cols-2">

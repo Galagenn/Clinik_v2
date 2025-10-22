@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { doctors } from "../doctors/data";
 
 export default function AboutUs() {
   return (
@@ -116,20 +117,13 @@ export default function AboutUs() {
                 <p className="mt-2 text-sm text-foreground/60">Опытные специалисты, которые заботятся о вашем здоровье</p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { name: "Айгуль Садыкова", role: "Главный врач", exp: "15 лет опыта", focus: "Общее руководство клиникой, терапевтические услуги", img: "/testimonials/avatar.jpg" },
-                  { name: "Марат Нуртазин", role: "Заведующий стоматологией", exp: "12 лет опыта", focus: "Стоматологические услуги, имплантация", img: "/testimonials/avatar.jpg" },
-                  { name: "Елена Ким", role: "Заведующая диагностикой", exp: "10 лет опыта", focus: "УЗИ, рентген, лабораторные исследования", img: "/testimonials/avatar.jpg" },
-                  { name: "Бахыт Жумагалиев", role: "Кардиолог", exp: "14 лет опыта", focus: "Диагностика и лечение сердечно-сосудистых заболеваний", img: "/testimonials/avatar.jpg" },
-                  { name: "Алёна Шевченко", role: "Дерматолог", exp: "8 лет опыта", focus: "Лечение кожных заболеваний, косметология", img: "/testimonials/avatar.jpg" },
-                  { name: "Канат Абдрахманов", role: "Невролог", exp: "11 лет опыта", focus: "Лечение неврологических заболеваний", img: "/testimonials/avatar.jpg" },
-                ].map((member, idx) => (
-                  <div key={idx} className="overflow-hidden rounded-2xl border border-border">
-                    <Image src={member.img} alt={member.name} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
+                {doctors.slice(0, 6).map((m) => (
+                  <div key={m.id} className="overflow-hidden rounded-2xl border border-border">
+                    <Image src={m.img} alt={m.role} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
                     <div className="p-5">
-                      <div className="text-lg font-semibold">{member.name}</div>
-                      <div className="text-sm text-foreground/60">{member.role} • {member.exp}</div>
-                      <div className="mt-2 text-sm text-foreground/70">{member.focus}</div>
+                      <div className="text-lg font-semibold">{m.role}</div>
+                      <div className="text-sm text-foreground/60">{m.specialization}</div>
+                      <div className="mt-2 text-sm text-foreground/70">Опыт: {m.exp}</div>
                     </div>
                   </div>
                 ))}

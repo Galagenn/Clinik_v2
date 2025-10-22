@@ -54,7 +54,7 @@ export default function Doctors() {
                 {doctors.map((doctor) => (
                   <div key={doctor.id} className="overflow-hidden rounded-2xl border border-border bg-white shadow-soft ring-1 ring-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-premium hover:ring-primary/10">
                     <div className="relative">
-                      <Image src={doctor.img} alt={doctor.name} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
+                      <Image src={doctor.img} alt={doctor.role} width={800} height={600} className="h-[25rem] w-full object-cover object-center" />
                       <div className="absolute top-4 right-4 flex items-center gap-2">
                         <div className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-primary">⭐ {doctor.rating}</div>
                         {doctor.nextSlots && doctor.nextSlots[0] && (
@@ -63,9 +63,8 @@ export default function Doctors() {
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold">{doctor.name}</h3>
-                      <div className="mt-1 text-sm text-foreground/60">{doctor.role}</div>
-                      <div className="mt-2 text-sm text-foreground/70">{doctor.specialization}</div>
+                      <h3 className="text-xl font-semibold">{doctor.role}</h3>
+                      <div className="mt-1 text-sm text-foreground/60">{doctor.specialization}</div>
                       {doctor.tags && doctor.tags.length > 0 && (
                         <div className="mt-3 flex flex-wrap gap-2">
                           {doctor.tags.slice(0, 3).map((t) => (

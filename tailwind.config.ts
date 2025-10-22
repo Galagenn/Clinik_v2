@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
   	extend: {
+			screens: {
+				hd: '1080px',
+			},
 			fontFamily: {
 				sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
 			},

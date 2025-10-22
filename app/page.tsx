@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { doctors } from "./doctors/data";
 
 export default function Home() {
   return (
@@ -186,17 +187,13 @@ export default function Home() {
                 <p className="mt-2 text-sm text-foreground/60">Опытные специалисты, международные протоколы, внимание к деталям.</p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { name: "Айгуль Садыкова", role: "Терапевт", exp: "Стаж 12 лет", focus: "Профилактика и лечение хронических заболеваний", img: "/testimonials/avatar.jpg" },
-                  { name: "Марат Нуртазин", role: "Стоматолог", exp: "Стаж 10 лет", focus: "Терапевтическая стоматология, гигиена", img: "/testimonials/avatar.jpg" },
-                  { name: "Елена Ким", role: "УЗИ-диагност", exp: "Стаж 9 лет", focus: "Комплексная ультразвуковая диагностика", img: "/testimonials/avatar.jpg" },
-                ].map((d) => (
-                  <div key={d.name} className="overflow-hidden rounded-2xl border border-border">
-                    <Image src={d.img} alt={d.name} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
+                {doctors.slice(0, 3).map((d) => (
+                  <div key={d.id} className="overflow-hidden rounded-2xl border border-border">
+                    <Image src={d.img} alt={d.role} width={800} height={600} className="h-48 w-full object-cover sm:h-56" />
                     <div className="p-5">
-                      <div className="text-lg font-semibold">{d.name}</div>
-                      <div className="text-sm text-foreground/60">{d.role} • {d.exp}</div>
-                      <div className="mt-2 text-sm text-foreground/70">{d.focus}</div>
+                      <div className="text-lg font-semibold">{d.role}</div>
+                      <div className="text-sm text-foreground/60">{d.specialization}</div>
+                      <div className="mt-2 text-sm text-foreground/70">Опыт: {d.exp}</div>
                     </div>
                   </div>
                 ))}
